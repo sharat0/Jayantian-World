@@ -32,6 +32,24 @@ Partial Public Class personal_details
     Protected WithEvents cat As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''courses control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents courses As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''add_langs control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents add_langs As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
     '''name control.
     '''</summary>
     '''<remarks>

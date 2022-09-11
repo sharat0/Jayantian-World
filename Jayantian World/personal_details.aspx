@@ -34,19 +34,41 @@
             <asp:Label ID="cat" runat="server"/>
             <br/>
 
-            <span class="label">Department:</span>
-            <input type="text" name="dept" id="dept" required/>
-            <br/>
 
             <span class="label">Course:</span>
-            <input type="text" name="course" id="course" required/>
+            <%--<input type="text" name="course" id="course" required/>--%>
+            <asp:DropDownList id="courses" runat="server" required> 
+               <asp:ListItem Value="BCA">BCA</asp:ListItem>
+               <asp:ListItem Value="BCA Analytics">BCA Analytics</asp:ListItem>
+               <asp:ListItem Value="BSC Computer Science">BSC Computer Science</asp:ListItem>
+               <asp:ListItem Value="Microbiology">MicroBiology</asp:ListItem>
+               <asp:ListItem Value="Biotechnology">Biotechnology</asp:ListItem>
+               <asp:ListItem Value="Forensic Science">Forensic Science</asp:ListItem>
+               <asp:ListItem Value="BBA LLB">BBA LLB</asp:ListItem>
+               <asp:ListItem Value="BCOM LLB">BCOM LLB</asp:ListItem>
+               <asp:ListItem Value="BA LLB">BA LLB</asp:ListItem>
+               <asp:ListItem Value="English">English</asp:ListItem>
+               <asp:ListItem Value="Hindi">Hindi</asp:ListItem>
+               <asp:ListItem Value="Kannada">Kannada</asp:ListItem>
+               <asp:ListItem Value="History">History</asp:ListItem>
+               <asp:ListItem Value="Media">Media</asp:ListItem>
+               <asp:ListItem Value="Political Science">Political Sciece</asp:ListItem>
+               <asp:ListItem Value="Sociology">Sociology</asp:ListItem>
+               <asp:ListItem Value="Psychology">Psychology</asp:ListItem>
+
+            </asp:DropDownList> 
 
             <br/>
 
             
             <span class="label">Additional Language:</span>
-            <!-- Additional Language -->
-            <input type="text" name="add_lang" id="add_lang" required/>
+            <asp:DropDownList id="add_langs" runat="server" required> 
+            
+               <asp:ListItem Value="eng">Additioal Eglish</asp:ListItem>
+               <asp:ListItem Value="hindi">Hindi </asp:ListItem>
+               <asp:ListItem Value="kannada">Kannada </asp:ListItem>
+            </asp:DropDownList>
+            <%--<input type="text" name="add_lang" id="add_lang" required/>--%>
             <br/>
 
 

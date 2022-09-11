@@ -20,6 +20,8 @@ Public Class login
         Dim dbpass As String
         Dim uid As String
 
+        Dim temp As String
+
         con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
         con.Open()
         cmd.Connection = con
@@ -35,17 +37,23 @@ Public Class login
             uid = dr("id")
             dbid = dr("uid")
             dbpass = dr("pass")
+            con.Close()
+
             If String.Compare(dbid, id) = 0 And String.Compare(dbpass, pass) = 0 Then
                 ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Login Successful');", True)
                 Session("id") = uid
+
+                con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
+                con.Open()
                 Try
-                    'IF STUDENT HAVE ALREADY FILLED 10TH DETAILS THEN 
+                    'If STUDENT HAVE ALREADY FILLED 10TH DETAILS Then 
 
                     'ADD MORE CODE HERE
 
                     cmd3.CommandText = "Select * from edu_10 where id= '" + id + "'"
                     dr3 = cmd.ExecuteReader
                     dr3.Read()
+                    temp = dr3("id")
 
                 Catch ex As Exception
 
@@ -54,18 +62,18 @@ Public Class login
                         cmd2.CommandText = "Select * from per_det where id= '" + id + "'"
                         dr2 = cmd.ExecuteReader
                         dr2.Read()
-                        Response.Redirect("educational.aspx", True)
+                        temp = dr2("id")
+                        Response.Redirect("personal_details.aspx", True)
                     Catch ex2 As Exception
                         'IF STUDENT HAVE NOT FILLED ANYTHING THEN REDIRECT TO PERSONAL DETAILS FORM
-                        Response.Redirect("personal_details.aspx", True)
-
+                        Response.Redirect("educational.aspx", True)
                     End Try
 
                 End Try
 
 
             Else
-                ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(' Invalid Login ');", True)
+                        ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(' Invalid Login ');", True)
             End If
         Catch ex As Exception
             ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('No data found');", True)

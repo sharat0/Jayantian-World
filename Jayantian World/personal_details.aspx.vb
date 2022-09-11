@@ -14,7 +14,7 @@ Public Class personal_details
         cmd.Connection = con
 
         Dim id As String = Session("id")
-        ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(' " + id + " ');", True)
+        'ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(' " + id + " ');", True)
         Dim ccat As String
         Dim nm As String
         Dim dtob As String
@@ -31,8 +31,6 @@ Public Class personal_details
         mail = dr("email")
         ph = dr("phone")
 
-        con.Close()
-
         cat.Text = ccat
         name.Text = nm
         dob.Text = dtob
@@ -43,9 +41,24 @@ Public Class personal_details
     End Sub
 
     Protected Sub btn_Click(sender As Object, e As EventArgs) Handles btn.Click
-        Dim dept As String = Request.Form("dept")
-        Dim course As String = Request.Form("course")
-        Dim addlag As String = Request.Form("add_lang")
+
+        Dim id As String = Session("id")
+        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
+        con.Open()
+        cmd.Connection = con
+
+        'COURSE DETAILS
+        Dim ccat As String = cat.Text
+        Dim course As String = courses.SelectedValue
+        Dim addlang As String = add_langs.SelectedValue
+        Dim dept As String
+
+        cmd.CommandText = "Select dept from programme where course='" + course + "'"
+        dr = cmd.ExecuteReader
+        dr.Read()
+        dept = dr("dept")
+        con.Close()
+
 
         'persoal details
         Dim gend As String = gender.SelectedValue
@@ -79,18 +92,24 @@ Public Class personal_details
         Dim annincome As String = Request.Form("income")
 
 
+        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
+        con.Open()
+        cmd.Connection = con
+        cmd.CommandText = "insert into course_det (id, cat, department, course, add_lang) values ('" + id + "', '" + ccat + "','" + dept + "' , '" + course + "', '" + addlang + "')"
+        cmd.ExecuteNonQuery()
+        con.Close()
+
 
         con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
         con.Open()
         cmd.Connection = con
-
-        Dim id As String = Session("id")
 
         cmd.CommandText = "insert into per_det (Id, gender, btown, bstate, peradd, curadd, lang1, lang2, lang3, lang4, lang5) values ('" + id + "', '" + gend + "','" + brtown + "' , '" + brstate + "', '" + peradd + "', '" + curadd + "', '" + lang1 + "', '" + lang2 + "', '" + lang3 + "', '" + lang4 + "', '" + lang5 + "')"
         cmd.ExecuteNonQuery()
 
         ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(' Data updated successfully ');", True)
         con.Close()
+        Response.Redirect("educational.aspx")
 
     End Sub
 End Class
