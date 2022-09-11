@@ -1,0 +1,288 @@
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="index.aspx.vb" Inherits="Jayantian_World.WebForm1" %>
+
+<!DOCTYPE HTML>
+
+<html xmlns="http://www.w3.org/1999/xaspx">
+<head runat="server">
+    <meta charset="UTF-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+    <!-- GOOGLE FONTS CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com"/>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"/>
+
+    <!-- Paragraph font -->
+    <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet"/>
+
+    <!-- FONT AWESOME CDN -->
+    <!-- fontawesome -->
+    <script src="https://kit.fontawesome.com/6d20788c52.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/nav.css"/>
+    <link rel="stylesheet" href="style.css"/>
+
+    <title>Jayantian World</title>
+</head>
+
+<body>
+    <div id="nav">
+        <ul>
+            <li><a href="index.aspx">Jayantian World</a></li>
+            <li id="nav_links"><a href="index.aspx" class="nav_link">Home</a></li>
+            <li><a href="#" class="nav_link">About Us</a></li>
+            <li><a href="admission.aspx" class="nav_link">Admission</a></li>
+            <li><a href="#" class="nav_link">Image Gallary</a></li>
+            <li><a href='#' class="nav_link">Contact</a></li>
+            <li id="nav_btn"><a href="form1.aspx" id="login">Admission Form</a></li>
+            <!-- <li><a href="#" id="signup">Signup</a></li> -->
+        </ul>
+    </div>
+    <div id="overview">
+        <div class="flex_container">
+            <div class="left">
+                <p id="p_head">
+                    Welcome to the <span class="word">Future</span> of Indian Education System
+                </p>
+                <p id="p_body">To provide educational opportunities to all aspiring youth to excel in life by nurturing academic excellence, fostering values, creating civic responsibility, inculcating environmental concern and building global competencies in a dynamic environment.</p>
+            </div>
+
+            <div class="right">
+                <img src="img/home_1.jpg" alt="Logo" id="img1" class="home_img"/>
+                <img src="img/home_2.png" alt="Logo" id="img2" class="home_img"/>
+                <img src="img/home_3.jpg" alt="Logo" id="img3" class="home_img"/>
+            </div>
+        </div>
+    </div>
+    <div id="support">
+        <span class="head">Student Support</span>
+        <div class="support_box">
+            <div class="supports">
+                <i class="fa-solid fa-building"></i> <br/>
+                <span class="box_head">Entrepreneurship and Innovation Centre</span>
+            </div>
+            <div class="supports">
+                <i class="fa-solid fa-house-medical"></i><br/>
+                <span class="box_head">Counselling Center</span>
+
+            </div>
+            <div class="supports">
+                <i class="fa-solid fa-kit-medical"></i> <br/>
+                <span class="box_head">Health Care</span>
+
+            </div>
+            <div class="supports">
+                <i class="fa-solid fa-venus"></i> <br/>
+                <span class="box_head">Women Empowerment Cell</span>
+
+            </div>
+            <div class="supports">
+                <i class="fa-solid fa-hands-holding-child"></i> <br/>
+                <span class="box_head">Anti- Ragging Committee</span>
+
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <span class="head">About Kristu Jayanti College</span> <br/>
+        <div class="flex_container">
+            <div class="left">
+                <p>Kristu Jayanti College strives to fulfill its mission to provide educational opportunities to all aspiring
+                    youth to
+                    excel in life by developing academic excellence, fostering values, creating civic responsibility,
+                    inculcating environmental concern and building global competencies in a dynamic environment.</p>
+                    <br/>
+                <p>
+                    Kristu Jayanti College, founded in 1999, is managed by "BODHI NIKETAN TRUST", formed by the members
+                    of St.
+                    Joseph Province of the Carmelites of Mary Immaculate (CMI). The College is affiliated to Bengaluru
+                    North
+                    University and is reaccredited with grade 'A++' in 2021 by NAAC in the Third Cycle of Accreditation.
+                    The
+                    College is recognized by UGC under the category 2(f) & 12(B). The College has been accorded
+                    Autonomous
+                    Status since 2013 by the University Grants Commission, Government of Karnataka & the Bangalore
+                    University.
+                    For its contribution in the field of Education, Kristu Jayanti College has been recently given the
+                    Clean and
+                    Smart Campus award. In the India Today - MDRA survey 2021, Kristu Jayanti College, Bengaluru is
+                    awarded as
+                    the Best Emerging College of the Century at National Level and the college is ranked 4th Best BCA,
+                    12th Best
+                    MSW, 17th Best BBA, 19th Best Commerce, 21st Best Arts, 24th Best Science and 34th Best Mass
+                    Communication
+                    College in India. The College is also ranked 2nd Best in BCA & MSW, 3rd best in Commerce, 4th Best
+                    in
+                    Science & Arts and 6th best in BBA and Mass Communication among the colleges in Bengaluru. </p>
+                
+            </div>
+            <div class="right">
+                <img src="img/rt2.png" alt="img"/>
+            </div>
+
+        </div>
+        <span class="more"><a href="about.aspx">Read More <i id="more-i" class="fa-solid fa-arrow-down"></i></a></span>
+    </div>
+    <!-- ABOUT ENDS -->
+
+    <!-- ADMISSION STARTS -->
+    <div id="admission">
+        <span class="head">Admission</span>
+        <p id="head_p">Offering extraordinary freedom to explore, to collaborate, and to challenge yourself</p>
+        <div class="video" onclick="pause()">
+            <video autoplay muted loop id="myVideo">
+                <source src="img/KJC.mp4" type="video/mp4"/>
+            </video>
+        </div>
+
+        <div class="flex_container" onscroll="updated()">
+            <div class="left">
+                <span class="adm_box_head">
+                    Explore the possibilities of a Jayantian education as you map out your college journey.
+                </span>
+                <p class="adm_p">
+                    We look for distinctive students who exhibit an abundance of energy and curiosity in their classes,
+                    activities, projects, research and lives.
+                </p>
+            </div>
+
+            <div class="right">
+                <span class="adm_box_head">
+                    Kristu Jayanti College meets the full financial need of every admitted undergrad who qualifies for assistance.
+                </span>
+                <p class="adm_p">
+                    Nearly 80% of undergrads receive some form of financial assistance. Generally, tuition is covered
+                    for families with incomes below Rs 150,000.
+                </p>
+            </div>
+        </div>
+        <span id="admission-more" class="more"><a href="admission.aspx">More about admission</a></span>
+    </div>
+
+    <!-- QUICK FACTS STARTS -->
+
+    <div id="fact">
+        <span class="head">Quick facts about College</span>
+        <div id="facts">
+            <div id="stu_cnt" class="count">
+                <!-- student counts -->
+                <span class="cnt_head">Student Count</span>
+                <span class="cnt-value">10,000</span>
+            </div>
+            <div id="fac_cnt" class="count">
+                <!-- Faculty counts -->
+                <span class="cnt_head">Faculty Count</span>
+                <span class="cnt-value">258</span>
+            </div>
+            <div id="lab_cnt" class="count">
+                <!-- Computer Lab counts -->
+                <span class="cnt_head">Lab Count</span>
+                <span class="cnt-value">44</span>
+            </div>
+            <div id="lib_cnt" class="count">
+                <!-- Library counts -->
+                <span class="cnt_head">Library Count</span>
+                <span class="cnt-value">3</span>
+            </div>
+            <div id="bld_cnt" class="count">
+                <!-- Buildings counts -->
+                <span class="cnt_head">Buildings Count</span>
+                <span class="cnt-value">3</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- FACT ENDS -->
+
+    <!-- FOOTER BEGINS -->
+    <div id="foot">
+        <div class="foot_divs">
+            <span class="foot_head">Kristu Jayanti College</span>
+            <span class="foot_add body">Bengaluru, Karnataka</span>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6435209667916!2d77.64028391482297!3d13.05834814079901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17578c79da7d%3A0xe96dcd8e2b982f8e!2sKristu%20Jayanti%20College%2C%20Autonomous!5e0!3m2!1sen!2sin!4v1661062854753!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <div class="foot_divs">
+            <span class="foot_head">Quick Links</span>
+            <ul>
+                <li id="foot_links"><a href="index.aspx" class="foot_link">Home</a></li>
+                <li><a href="#" class="foot_link">About Us</a></li>
+                <li><a href="admission.aspx" class="foot_link">Admission</a></li>
+                <li><a href="#" class="foot_link">Image Gallary</a></li>
+                <li><a href='#' class="foot_link">Contact</a></li>
+            </ul>
+        </div>
+        <div class="foot_divs">
+            <span class="foot_head">Address</span>
+            <span class="body">K Narayanpura, Kothanur, Bengaluru -560077, India</span>
+            
+        </div>
+        <div class="foot_divs">
+            <span class="foot_head">Contact</span>
+            <span class="contact_body con_fir"><i class="fa-solid fa-square-phone"></i>(080)68737777</span>
+            <span class="contact_body"><i class="fa-solid fa-square-phone"></i>(080)28465611</span>
+            <span class="contact_body"><i class="fa-solid fa-square-phone"></i>(080)28465770</span>
+            <span class="contact_body"><i class="fa-solid fa-square-phone"></i>(080)28465353</span>
+            <span class="contact_body"><i class="fa-solid fa-envelope"></i><a href="mailto:info@kristujayanti.com"> info@kristujayanti.com</a></span>
+        </div>
+    </div>
+
+</body>
+<script>
+    // Get the video
+    var video = document.getElementById("myVideo");
+
+
+    // Pause and play the video, and change the button text
+    function pause() {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    }
+
+    // let stu_cnts=setInterval(updated);
+    // let fac_cnts=setInterval(updated);
+    // let bld_cnts=setInterval(updated);
+    // let lab_cnts=setInterval(updated);
+    // let lib_cnts=setInterval(updated);
+    // let upto=0;
+
+    // function updated(){
+    //     var students= document.getElementById("stu_cnt");
+    //     var faculty= document.getElementById("fac_cnt");
+    //     var buildings= document.getElementById("bld_cnt");
+    //     var labs= document.getElementById("lab_cnt");
+    //     var library= document.getElementById("lib_cnt");
+    //     stu_cnt.inneraspx=++upto;
+    //     if(upto===10000)
+    //     {
+    //         clearInterval(stu_cnts);
+    //         upto=0
+    //     }
+    //     fac_cnt.inneraspx=++upto;
+    //     if(upto===258)
+    //     {
+    //         clearInterval(fac_cnts);
+    //     }
+    //     if(upto===44)
+    //     {
+    //         clearInterval(lab_cnts);
+    //     }
+    //     if(upto===3)
+    //     {
+    //         clearInterval(lib_cnts);
+    //     }
+    //     if(upto===3)
+    //     {
+    //         clearInterval(bld_cnts);
+    //     }
+    // }
+
+
+</script>
+
+</html>

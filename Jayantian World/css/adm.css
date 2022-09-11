@@ -1,0 +1,159 @@
+
+/* SETTING FONT FOR PARAGRAPH */
+p {
+    font-family: 'Hind', sans-serif;
+    text-align: justify;
+}
+
+/* BODY STARTS */
+
+.head {
+    display: block;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 44px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.head2{
+    display: block;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.head3{
+    display: block;
+    font-size: 28px;
+    margin: 0 10%;
+    text-align: center;
+}
+
+.head4{
+    display: block;
+    font-size: 28px;
+    margin: 2% 5%;
+}
+
+.head5{
+    display: block;
+    font-size: 24px;
+    margin: 2% 5%;   
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline 2px #000;
+}
+
+#images_ug{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    background-color: #0dacd7;
+}
+
+#img1, #img2, #img3{
+    display: inline-block;
+    width: 30%;
+    margin-left: 15px;
+}
+
+#img2{
+    width: 35%;
+}
+
+.flex_container{
+    display: flex;
+    padding-bottom: 50px;
+}
+
+.left{
+    width: 50%;
+}
+
+.ug_p{
+    padding: 0px 30px;
+}
+
+.fee{
+    width: 40%;
+    height: 100%;
+    margin-left: 5%;
+    background-color: aliceblue;
+}
+
+.fee ul li{
+    list-style-type: none;
+    text-align: center;
+    padding: 5px 0;
+    text-decoration: underline 5px #fff;
+}
+
+.apply{
+    display: inline-block;
+    text-align: center;
+    padding: 10px 15px;
+    margin-left: 35%;
+    margin-top: 30px;
+    background-color: rgb(90, 172, 248);
+    border-radius: 5px;
+}
+
+.apply a{
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    font-size: 22px;
+}
+
+.rank_img{
+    width: 90%;
+    height: 350px;
+}
+
+.ug_adm{
+    width: 50%;
+    height: 100%;
+    margin-left: 2%;
+}
+
+
+/* POST GRADUATE STARTS */
+
+.pg_programme{
+    flex-direction: row-reverse;
+}
+
+
+/* ADMISSION PROCESS BEGINS */
+
+#process .left{
+    width: 60%;
+}
+
+#process .right{
+    width: 40%;
+    background-color: rgb(250, 243, 243);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#adm_img{
+    padding-left: 5%;
+    width: 100%;
+}
+
+#assistance{
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    padding: 20px 30px;
+}
+
+#process ul li{
+    list-style-type: none;
+    text-align: center;
+}

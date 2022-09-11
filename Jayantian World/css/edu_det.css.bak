@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Hind', sans-serif;
+}
+
+#main{
+    padding-top: 7%;
+    padding-bottom: 50px;
+    height: 100vh;
+    background: url('../img/personal_details/02.jpg') no-repeat center;
+    background-size: cover;
+
+}
+
+.head{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 34px;
+    display: block;
+    /* text-align: center; */
+    margin-left: 25%;
+    text-decoration: underline;
+    padding: 20px 0;
+}
+
+.head2{
+    display: block;
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    margin-bottom: 25px;
+    text-decoration: underline 2px solid #000;
+}
+
+.label{
+    font-size: 18px;
+    display: inline-block;
+    text-align: right;
+}
+
+input{
+    /* display: block; */
+    width: 40%;
+    margin-bottom: 10px;
+    height: 30px;
+    /* margin-left: 25px; */
+}
+
+form{
+    background-color: rgba(255,255,255,.8);
+    padding-left: 10%;
+    width: 70%;
+    margin-left: 15%;
+    padding-top: 20px;
+    padding-bottom: 40px;
+    border-radius: 5px;
+}
+
+
+
+#max_marks{
+    margin-left: 20px;
+}
+
+#percentage{
+    margin-left: 60px;
+}
+
+#pass_year{
+    margin-left: 25px;
+}
+
+#boards {
+    margin-left: 102px;
+	margin-bottom: 10px;
+	width: 40%;
+	height: 30px;
+	text-align: center;
+}
+
+#state{
+    margin-left: 105px;
+}
+
+
+#btn{
+    margin-top: 25px;
+    margin-left: 35%;
+    display: inline-block;
+    outline: 0;
+    border: 0;
+    cursor: pointer;
+    will-change: box-shadow,transform;
+    background: radial-gradient( 100% 100% at 100% 0%, #89E5FF 0%, #5468FF 100% );
+    box-shadow: 0px 2px 4px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px rgb(58 65 111 / 50%);
+    padding: 0 32px;
+    border-radius: 6px;
+    color: #fff;
+    height: 48px;
+    font-size: 18px;
+    text-shadow: 0 1px 0 rgb(0 0 0 / 40%);
+    transition: box-shadow 0.15s ease,transform 0.15s ease;
+    border: .5px solid #fff;
+}
+
+#btn:hover {
+    box-shadow: 0px 4px 8px rgb(45 35 66 / 40%), 0px 7px 13px -3px rgb(45 35 66 / 30%), inset 0px -3px 0px #3c4fe0;
+    transform: translateY(-2px);
+}
+
+#btn:active{
+    box-shadow: inset 0px 3px 7px #3c4fe0;
+    transform: translateY(2px);
+}
