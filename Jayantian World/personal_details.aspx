@@ -106,7 +106,7 @@
             <br/>
 
             <span class="label">Birth Town:</span>
-            <input type="text" name="btwon" id="btown" required/>
+            <input type="text" name="btown" id="btown" required/>
             <br/>
 
             <span class="label">Birth State:</span>

@@ -8,36 +8,40 @@ Public Class personal_details
 
 
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-        'Protected Sub Page_Load(Sender As Object, e As EventArgs) Handles Me.Load
-        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
-        con.Open()
-        cmd.Connection = con
+        If Session("id") = Nothing Then
+            Response.Redirect("login.aspx")
+        Else
 
-        Dim id As String = Session("id")
-        'ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(' " + id + " ');", True)
-        Dim ccat As String
-        Dim nm As String
-        Dim dtob As String
-        Dim mail As String
-        Dim ph As String
+            Dim id As String = Session("id")
+            con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
+            con.Open()
+            cmd.Connection = con
 
-        cmd.CommandText = "Select * from form1 where id = '" + id + "'"
-        dr = cmd.ExecuteReader
+            'ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(' " + id + " ');", True)
+            Dim ccat As String
+            Dim nm As String
+            Dim dtob As String
+            Dim mail As String
+            Dim ph As String
 
-        dr.Read()
-        ccat = dr("programme")
-        nm = dr("name")
-        dtob = dr("dob")
-        mail = dr("email")
-        ph = dr("phone")
+            cmd.CommandText = "Select * from form1 where id = '" + id + "'"
+            dr = cmd.ExecuteReader
 
-        cat.Text = ccat
-        name.Text = nm
-        dob.Text = dtob
-        email.Text = mail
-        num.Text = ph
-        con.Close()
+            dr.Read()
+            ccat = dr("programme")
+            nm = dr("name")
+            dtob = dr("dob")
+            mail = dr("email")
+            ph = dr("phone")
 
+            cat.Text = ccat
+            name.Text = nm
+            dob.Text = dtob
+            email.Text = mail
+            num.Text = ph
+            con.Close()
+
+        End If
     End Sub
 
     Protected Sub btn_Click(sender As Object, e As EventArgs) Handles btn.Click
@@ -104,7 +108,19 @@ Public Class personal_details
         con.Open()
         cmd.Connection = con
 
-        cmd.CommandText = "insert into per_det (Id, gender, btown, bstate, peradd, curadd, lang1, lang2, lang3, lang4, lang5) values ('" + id + "', '" + gend + "','" + brtown + "' , '" + brstate + "', '" + peradd + "', '" + curadd + "', '" + lang1 + "', '" + lang2 + "', '" + lang3 + "', '" + lang4 + "', '" + lang5 + "')"
+        'cmd.CommandText = "insert into per_det (Id, gender, btown, bstate, peradd, curadd, lang1, lang2, lang3, lang4, lang5) values ('" + id + "', '" + gend + "','" + brtown + "' , '" + brstate + "', '" + peradd + "', '" + curadd + "', '" + lang1 + "', '" + lang2 + "', '" + lang3 + "', '" + lang4 + "', '" + lang5 + "')"
+        cmd.CommandText = "insert into per_det (Id, gender, btown, bstate, peradd, curadd, lang1, lang2, lang3, lang4, lang5) values (@id, @gender, @btown, @bstate, @peradd, @curadd, @lang1, @lang2, @lang3, @lang4, @lang5)"
+        cmd.Parameters.Add("@id", SqlDbType.Int).Value = id
+        cmd.Parameters.Add("@gender", SqlDbType.VarChar).Value = gend
+        cmd.Parameters.Add("@btown", SqlDbType.VarChar).Value = brtown
+        cmd.Parameters.Add("@bstate", SqlDbType.VarChar).Value = brstate
+        cmd.Parameters.Add("@peradd", SqlDbType.VarChar).Value = peradd
+        cmd.Parameters.Add("@curadd", SqlDbType.VarChar).Value = curadd
+        cmd.Parameters.Add("@lang1", SqlDbType.VarChar).Value = lang1
+        cmd.Parameters.Add("@lang2", SqlDbType.VarChar).Value = lang2
+        cmd.Parameters.Add("@lang3", SqlDbType.VarChar).Value = lang3
+        cmd.Parameters.Add("@lang4", SqlDbType.VarChar).Value = lang4
+        cmd.Parameters.Add("@lang5", SqlDbType.VarChar).Value = lang5
         cmd.ExecuteNonQuery()
 
         ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(' Data updated successfully ');", True)
