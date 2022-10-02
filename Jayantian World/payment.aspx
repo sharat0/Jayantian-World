@@ -31,7 +31,7 @@
             <div class="left">
             <form id="form1" runat="server">
                 <span class="fee">Total Payable Amount: </span>
-                <label for="" id="fee"></label>
+                <asp:Label ID="fee" runat="server"  class="data"/>
                 <br/>
                 <span class="label">Name on Card</span>
                 <input type="text" name="name" id="name" placeholder="Name" required/>

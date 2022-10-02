@@ -94,9 +94,11 @@ Public Class educational_12
                                 </html>"
 
             Smtp_Server.Send(e_mail)
-            Response.Redirect("home.aspx")
+            Response.Redirect("home.aspx", False)
         Catch error_t As Exception
             MsgBox(error_t.ToString)
         End Try
+
+
     End Sub
 End Class

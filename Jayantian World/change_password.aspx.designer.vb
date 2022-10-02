@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class payment
+Partial Public Class chage_password
 
     '''<summary>
     '''form1 control.
@@ -23,20 +23,11 @@ Partial Public Class payment
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''fee control.
+    '''change control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents fee As Global.System.Web.UI.WebControls.Label
-
-    '''<summary>
-    '''submit control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents submit As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents change As Global.System.Web.UI.WebControls.Button
 End Class

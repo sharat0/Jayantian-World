@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="css/nav.css"/>
     <link rel="stylesheet" href="css/form.css"/>
 
-    <title>Admission Form | New </title>
+    <title>Registrarion Form | New </title>
     </head>
     <body>
       <div id="nav">
@@ -40,7 +40,7 @@
         </ul>
     </div>
     <div id="form">
-        <span class="head">Admission Form</span>
+        <span class="head">Registration Form</span>
         <span class="login">Already registered? Login <a href="#">here</a></span>
 
         <form id="form1" runat="server">

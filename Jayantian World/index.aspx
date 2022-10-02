@@ -38,7 +38,6 @@
             <li><a href="#" class="nav_link">Image Gallary</a></li>
             <li><a href='#' class="nav_link">Contact</a></li>
             <li id="nav_btn"><a href="form1.aspx" id="login">Admission Form</a></li>
-            <!-- <li><a href="#" id="signup">Signup</a></li> -->
         </ul>
     </div>
     <div id="overview">

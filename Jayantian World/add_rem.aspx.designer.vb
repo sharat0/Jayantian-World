@@ -11,7 +11,7 @@ Option Strict On
 Option Explicit On
 
 
-Partial Public Class payment
+Partial Public Class add_rem
 
     '''<summary>
     '''form1 control.
@@ -23,20 +23,38 @@ Partial Public Class payment
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''fee control.
+    '''uname control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents fee As Global.System.Web.UI.WebControls.Label
+    Protected WithEvents uname As Global.System.Web.UI.WebControls.TextBox
 
     '''<summary>
-    '''submit control.
+    '''branch control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents submit As Global.System.Web.UI.WebControls.Button
+    Protected WithEvents branch As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''rem control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents [rem] As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''add control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents add As Global.System.Web.UI.WebControls.Button
 End Class
