@@ -43,6 +43,11 @@ form{
 	padding-bottom:40px;
 }
 
+#branch{
+	text-align:center;
+	width: 22px;
+}
+
 input[type=text], input[type=tel], input[type=email]{
     background-color: transparent;
     border: none;

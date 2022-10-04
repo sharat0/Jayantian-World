@@ -132,9 +132,10 @@
   <ItemGroup>
     <Content Include="About.aspx" />
     <Content Include="add_rem.aspx" />
-    <Content Include="admin.aspx" />
+    <Content Include="accepted.aspx" />
+    <Content Include="pending.aspx" />
+    <Content Include="rejected.aspx" />
     <Content Include="admission.aspx" />
-    <Content Include="admission.html" />
     <Content Include="App_Data\Jayantian.mdf" />
     <Content Include="App_Data\Jayantian_log.ldf">
       <DependentUpon>Jayantian.mdf</DependentUpon>
@@ -196,6 +197,8 @@
     <Content Include="Scripts\WebForms\WebForms.js" />
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="admin.aspx" />
+    <Content Include="student_list.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
@@ -207,11 +210,25 @@
       <DependentUpon>add_rem.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="admin.aspx.designer.vb">
-      <DependentUpon>admin.aspx</DependentUpon>
+    <Compile Include="accepted.aspx.designer.vb">
+      <DependentUpon>accepted.aspx</DependentUpon>
     </Compile>
-    <Compile Include="admin.aspx.vb">
-      <DependentUpon>admin.aspx</DependentUpon>
+    <Compile Include="accepted.aspx.vb">
+      <DependentUpon>accepted.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="pending.aspx.designer.vb">
+      <DependentUpon>pending.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="pending.aspx.vb">
+      <DependentUpon>pending.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="rejected.aspx.designer.vb">
+      <DependentUpon>rejected.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="rejected.aspx.vb">
+      <DependentUpon>rejected.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="admission.aspx.designer.vb">
@@ -335,6 +352,20 @@
     <Compile Include="Site.Master.vb">
       <DependentUpon>Site.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin.aspx.designer.vb">
+      <DependentUpon>admin.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin.aspx.vb">
+      <DependentUpon>admin.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="student_list.aspx.designer.vb">
+      <DependentUpon>student_list.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="student_list.aspx.vb">
+      <DependentUpon>student_list.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="ViewSwitcher.ascx.vb">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>

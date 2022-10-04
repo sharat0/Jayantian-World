@@ -23,13 +23,22 @@ Partial Public Class Form1
     Protected WithEvents form1 As Global.System.Web.UI.HtmlControls.HtmlForm
 
     '''<summary>
-    '''programme control.
+    '''prog control.
     '''</summary>
     '''<remarks>
     '''Auto-generated field.
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
-    Protected WithEvents programme As Global.System.Web.UI.WebControls.RadioButtonList
+    Protected WithEvents prog As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''branch control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents branch As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
     '''fee control.

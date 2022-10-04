@@ -37,6 +37,7 @@ Public Class add_rem
 
 
     Protected Sub add_Click(sender As Object, e As EventArgs) Handles add.Click
+        Dim id As String = Request.Form("id")
         Dim usr As String = Request.Form("uname")
         Dim pas As String = Request.Form("pass")
         Dim cpas As String = Request.Form("cpass")
@@ -49,7 +50,7 @@ Public Class add_rem
             con.Open()
             cmd.Connection = con
 
-            cmd.CommandText = "INSERT into login (uid, pass, type, branch) values('" + usr + "','" + cpas + "', 1, '" + brnch + "')"
+            cmd.CommandText = "INSERT into login (id, uid, pass, type, branch) values('" + id + "', '" + usr + "','" + cpas + "', 1, '" + brnch + "')"
             cmd.ExecuteNonQuery()
             ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Admin Added Successfully!');", True)
             con.Close()

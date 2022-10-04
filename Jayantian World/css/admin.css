@@ -62,6 +62,8 @@
   text-decoration: none;
   display: block;
   text-align: left;
+  text-style: display oblique
+  
 }
 
 /* Add a grey background color to dropdown links on hover */
@@ -73,6 +75,26 @@
 .dropdown:hover .dropdown-content {
   display: block;
 }
+
+
+.btn{
+	width:10%;
+	height:25px;
+	border-radius: 15px;
+}
+
+#accepted{
+	background-color:green;
+}
+
+#rejected{
+	background-color: red;
+}
+
+#pending{
+	background-color:grey;
+}
+
 
 #table-data{
 	margin-top: 20px;

@@ -29,12 +29,12 @@ Public Class educational_12
         Dim reg As String = Request.Form("reg_no")
 
         'SUBJECTS
-        Dim sub1 As String = Request.Form("sub1")
-        Dim sub2 As String = Request.Form("sub2")
-        Dim sub3 As String = Request.Form("sub3")
-        Dim sub4 As String = Request.Form("sub4")
-        Dim sub5 As String = Request.Form("sub5")
-        Dim sub6 As String = Request.Form("sub6")
+        Dim sub1 As String = subj1.SelectedValue
+        Dim sub2 As String = subj2.SelectedValue
+        Dim sub3 As String = subj3.SelectedValue
+        Dim sub4 As String = subj4.SelectedValue
+        Dim sub5 As String = subj5.SelectedValue
+        Dim sub6 As String = subj6.SelectedValue
 
         'MARKS SCORED
         Dim mar1 As String = Request.Form("ms1")
@@ -82,7 +82,7 @@ Public Class educational_12
 
             e_mail = New MailMessage()
             e_mail.From = New MailAddress("kjcadmission01@gmail.com")
-            e_mail.To.Add(Mail)
+            e_mail.To.Add(mail)
             e_mail.Subject = "Admission Form Completed!"
             e_mail.IsBodyHtml = True
             e_mail.Body = "<html>

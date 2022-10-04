@@ -32,6 +32,60 @@ Partial Public Class educational_12
     Protected WithEvents board As Global.System.Web.UI.WebControls.DropDownList
 
     '''<summary>
+    '''subj1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents subj1 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''subj2 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents subj2 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''subj3 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents subj3 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''subj4 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents subj4 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''subj5 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents subj5 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
+    '''subj6 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents subj6 As Global.System.Web.UI.WebControls.DropDownList
+
+    '''<summary>
     '''btn control.
     '''</summary>
     '''<remarks>

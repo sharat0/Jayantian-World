@@ -45,70 +45,92 @@ Public Class login
             dbid = dr("uid")
             dbpass = dr("pass")
             type = dr("type")
-            branch = dr("branch")
+            dr.Close()
+            con.Close()
 
 
             If String.Compare(dbid, id) = 0 And String.Compare(dbpass, pass) = 0 Then
 
                 Session("id") = uid
-                temp = 1
-                adm = branch
 
             Else
                 ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(' Invalid Login ');", True)
             End If
-            con.Close()
         Catch ex As Exception
             ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('No data found');", True)
         End Try
 
-        If type = 1 Then
-            Session("adm") = 1
-            Session("branch") = branch
-            Response.Redirect("admin.aspx")
-        End If
 
-        If temp = 1 Then
+        If type = 1 Then
             con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
             con.Open()
             cmd.Connection = con
-            cmd.CommandText = "Select count(*) as cnt from per_det where id='" + uid + "'"
+            cmd.CommandText = "Select * from login where id = '" + uid + "'"
+            dr = cmd.ExecuteReader()
+            dr.Read()
+            branch = dr("branch")
+            con.Close()
+            Session("adm") = 1
+            Session("branch") = branch
+            Response.Redirect("admin.aspx")
+
+        Else
+            con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
+            con.Open()
+            cmd.Connection = con
+            cmd.CommandText = "Select pay_status from form1 where id='" + uid + "'"
             dr = cmd.ExecuteReader()
             dr.Read()
 
-            temp2 = dr("cnt")
-            If temp2 = 0 Then
-                Response.Redirect("personal_details.aspx")
+            temp = dr("pay_status")
+            con.Close()
+
+            If temp = 0 Then
+                Response.Redirect("payment.aspx")
             Else
-                con.Close()
+
                 con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
                 con.Open()
                 cmd.Connection = con
-                cmd.CommandText = "Select count(*) as cnt from edu_10 where id='" + uid + "'"
+                cmd.CommandText = "Select count(*) as cnt from per_det where id='" + uid + "'"
                 dr = cmd.ExecuteReader()
                 dr.Read()
 
-                temp3 = dr("cnt")
-                con.Close()
-
-                If temp3 = 0 Then
-                    Response.Redirect("educational.aspx")
-
+                temp2 = dr("cnt")
+                If temp2 = 0 Then
+                    Response.Redirect("personal_details.aspx")
                 Else
+                    con.Close()
                     con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
                     con.Open()
                     cmd.Connection = con
-                    cmd.CommandText = "Select count(*) as cnt from edu_12 where id='" + uid + "'"
+                    cmd.CommandText = "Select count(*) as cnt from edu_10 where id='" + uid + "'"
                     dr = cmd.ExecuteReader()
                     dr.Read()
-                    temp4 = dr("cnt")
-                    If temp4 = 0 Then
-                        Response.Redirect("educational_12.aspx")
+
+                    temp3 = dr("cnt")
+                    con.Close()
+
+                    If temp3 = 0 Then
+                        Response.Redirect("educational.aspx")
+
                     Else
+                        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
+                        con.Open()
+                        cmd.Connection = con
+                        cmd.CommandText = "Select count(*) as cnt from edu_12 where id='" + uid + "'"
+                        dr = cmd.ExecuteReader()
+                        dr.Read()
+                        temp4 = dr("cnt")
+                        If temp4 = 0 Then
+                            Response.Redirect("educational_12.aspx")
+                        Else
 
-                        Response.Redirect("home.aspx")
+                            Response.Redirect("home.aspx")
 
+                        End If
                     End If
+
                 End If
 
             End If

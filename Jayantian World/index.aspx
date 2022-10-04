@@ -4,26 +4,26 @@
 
 <html xmlns="http://www.w3.org/1999/xaspx">
 <head runat="server">
-    <meta charset="UTF-8"/>
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- GOOGLE FONTS CDN -->
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet" />
 
     <!-- Paragraph font -->
-    <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet" />
 
     <!-- FONT AWESOME CDN -->
     <!-- fontawesome -->
     <script src="https://kit.fontawesome.com/6d20788c52.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="css/nav.css"/>
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="css/nav.css" />
+    <link rel="stylesheet" href="style.css" />
 
     <title>Jayantian World</title>
 </head>
@@ -50,9 +50,9 @@
             </div>
 
             <div class="right">
-                <img src="img/home_1.jpg" alt="Logo" id="img1" class="home_img"/>
-                <img src="img/home_2.png" alt="Logo" id="img2" class="home_img"/>
-                <img src="img/home_3.jpg" alt="Logo" id="img3" class="home_img"/>
+                <img src="img/home_1.jpg" alt="Logo" id="img1" class="home_img" />
+                <img src="img/home_2.png" alt="Logo" id="img2" class="home_img" />
+                <img src="img/home_3.jpg" alt="Logo" id="img3" class="home_img" />
             </div>
         </div>
     </div>
@@ -60,40 +60,48 @@
         <span class="head">Student Support</span>
         <div class="support_box">
             <div class="supports">
-                <i class="fa-solid fa-building"></i> <br/>
+                <i class="fa-solid fa-building"></i>
+                <br />
                 <span class="box_head">Entrepreneurship and Innovation Centre</span>
             </div>
             <div class="supports">
-                <i class="fa-solid fa-house-medical"></i><br/>
+                <i class="fa-solid fa-house-medical"></i>
+                <br />
                 <span class="box_head">Counselling Center</span>
 
             </div>
             <div class="supports">
-                <i class="fa-solid fa-kit-medical"></i> <br/>
+                <i class="fa-solid fa-kit-medical"></i>
+                <br />
                 <span class="box_head">Health Care</span>
 
             </div>
             <div class="supports">
-                <i class="fa-solid fa-venus"></i> <br/>
+                <i class="fa-solid fa-venus"></i>
+                <br />
                 <span class="box_head">Women Empowerment Cell</span>
 
             </div>
             <div class="supports">
-                <i class="fa-solid fa-hands-holding-child"></i> <br/>
+                <i class="fa-solid fa-hands-holding-child"></i>
+                <br />
                 <span class="box_head">Anti- Ragging Committee</span>
 
             </div>
         </div>
     </div>
     <div id="about">
-        <span class="head">About Kristu Jayanti College</span> <br/>
+        <span class="head">About Kristu Jayanti College</span>
+        <br />
         <div class="flex_container">
             <div class="left">
-                <p>Kristu Jayanti College strives to fulfill its mission to provide educational opportunities to all aspiring
+                <p>
+                    Kristu Jayanti College strives to fulfill its mission to provide educational opportunities to all aspiring
                     youth to
                     excel in life by developing academic excellence, fostering values, creating civic responsibility,
-                    inculcating environmental concern and building global competencies in a dynamic environment.</p>
-                    <br/>
+                    inculcating environmental concern and building global competencies in a dynamic environment.
+                </p>
+                <br />
                 <p>
                     Kristu Jayanti College, founded in 1999, is managed by "BODHI NIKETAN TRUST", formed by the members
                     of St.
@@ -115,11 +123,12 @@
                     Communication
                     College in India. The College is also ranked 2nd Best in BCA & MSW, 3rd best in Commerce, 4th Best
                     in
-                    Science & Arts and 6th best in BBA and Mass Communication among the colleges in Bengaluru. </p>
-                
+                    Science & Arts and 6th best in BBA and Mass Communication among the colleges in Bengaluru.
+                </p>
+
             </div>
             <div class="right">
-                <img src="img/rt2.png" alt="img"/>
+                <img src="img/rt2.png" alt="img" />
             </div>
 
         </div>
@@ -133,14 +142,13 @@
         <p id="head_p">Offering extraordinary freedom to explore, to collaborate, and to challenge yourself</p>
         <div class="video" onclick="pause()">
             <video autoplay muted loop id="myVideo">
-                <source src="img/KJC.mp4" type="video/mp4"/>
+                <source src="img/KJC.mp4" type="video/mp4" />
             </video>
         </div>
 
         <div class="flex_container" onscroll="updated()">
             <div class="left">
-                <span class="adm_box_head">
-                    Explore the possibilities of a Jayantian education as you map out your college journey.
+                <span class="adm_box_head">Explore the possibilities of a Jayantian education as you map out your college journey.
                 </span>
                 <p class="adm_p">
                     We look for distinctive students who exhibit an abundance of energy and curiosity in their classes,
@@ -149,8 +157,7 @@
             </div>
 
             <div class="right">
-                <span class="adm_box_head">
-                    Kristu Jayanti College meets the full financial need of every admitted undergrad who qualifies for assistance.
+                <span class="adm_box_head">Kristu Jayanti College meets the full financial need of every admitted undergrad who qualifies for assistance.
                 </span>
                 <p class="adm_p">
                     Nearly 80% of undergrads receive some form of financial assistance. Generally, tuition is covered
@@ -193,7 +200,7 @@
             </div>
         </div>
     </div>
-    
+
     <!-- FACT ENDS -->
 
     <!-- FOOTER BEGINS -->
@@ -201,7 +208,7 @@
         <div class="foot_divs">
             <span class="foot_head">Kristu Jayanti College</span>
             <span class="foot_add body">Bengaluru, Karnataka</span>
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6435209667916!2d77.64028391482297!3d13.05834814079901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17578c79da7d%3A0xe96dcd8e2b982f8e!2sKristu%20Jayanti%20College%2C%20Autonomous!5e0!3m2!1sen!2sin!4v1661062854753!5m2!1sen!2sin" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3886.6435209667916!2d77.64028391482297!3d13.05834814079901!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae17578c79da7d%3A0xe96dcd8e2b982f8e!2sKristu%20Jayanti%20College%2C%20Autonomous!5e0!3m2!1sen!2sin!4v1661062854753!5m2!1sen!2sin" width="400" height="300" style="border: 0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
         <div class="foot_divs">
             <span class="foot_head">Quick Links</span>
@@ -216,7 +223,7 @@
         <div class="foot_divs">
             <span class="foot_head">Address</span>
             <span class="body">K Narayanpura, Kothanur, Bengaluru -560077, India</span>
-            
+
         </div>
         <div class="foot_divs">
             <span class="foot_head">Contact</span>
@@ -224,7 +231,7 @@
             <span class="contact_body"><i class="fa-solid fa-square-phone"></i>(080)28465611</span>
             <span class="contact_body"><i class="fa-solid fa-square-phone"></i>(080)28465770</span>
             <span class="contact_body"><i class="fa-solid fa-square-phone"></i>(080)28465353</span>
-            <span class="contact_body"><i class="fa-solid fa-envelope"></i><a href="mailto:info@kristujayanti.com"> info@kristujayanti.com</a></span>
+            <span class="contact_body"><i class="fa-solid fa-envelope"></i><a href="mailto:info@kristujayanti.com">info@kristujayanti.com</a></span>
         </div>
     </div>
 
