@@ -6,6 +6,20 @@ Public Class add_rem
     Dim dr As SqlDataReader
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
 
+        If Session("id") = Nothing Then
+            Response.Redirect("login.aspx")
+
+        ElseIf Session("adm") = Nothing Then
+            Response.Redirect("restricted.aspx")
+
+        ElseIf Session("branch") <> "admin" Then
+            Response.Redirect("restricted.aspx")
+        Else
+
+        End If
+
+
+
     End Sub
 
 

@@ -482,15 +482,6 @@ Partial Public Class test
     Protected WithEvents per12 As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
-    '''rem control.
-    '''</summary>
-    '''<remarks>
-    '''Auto-generated field.
-    '''To modify move field declaration from designer file to code-behind file.
-    '''</remarks>
-    Protected WithEvents [rem] As Global.System.Web.UI.WebControls.Button
-
-    '''<summary>
     '''add control.
     '''</summary>
     '''<remarks>
@@ -498,4 +489,13 @@ Partial Public Class test
     '''To modify move field declaration from designer file to code-behind file.
     '''</remarks>
     Protected WithEvents add As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''rem control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents [rem] As Global.System.Web.UI.WebControls.Button
 End Class

@@ -27,6 +27,7 @@ Public Class login
         Dim temp3 As Integer = 0
         Dim temp4 As Integer = 0
         Dim adm As Integer = 0
+        Dim status As Integer = 0
 
 
         con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
@@ -45,6 +46,7 @@ Public Class login
             dbid = dr("uid")
             dbpass = dr("pass")
             type = dr("type")
+
             dr.Close()
             con.Close()
 
@@ -52,6 +54,7 @@ Public Class login
             If String.Compare(dbid, id) = 0 And String.Compare(dbpass, pass) = 0 Then
 
                 Session("id") = uid
+                Session("regno") = dbid
 
             Else
                 ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(' Invalid Login ');", True)
@@ -78,11 +81,13 @@ Public Class login
             con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
             con.Open()
             cmd.Connection = con
-            cmd.CommandText = "Select pay_status from form1 where id='" + uid + "'"
+            cmd.CommandText = "Select * from form1 where id='" + uid + "'"
             dr = cmd.ExecuteReader()
             dr.Read()
 
             temp = dr("pay_status")
+            status = dr("app_status")
+
             con.Close()
 
             If temp = 0 Then
@@ -125,8 +130,11 @@ Public Class login
                         If temp4 = 0 Then
                             Response.Redirect("educational_12.aspx")
                         Else
-
-                            Response.Redirect("home.aspx")
+                            If status = 0 Or status = 2 Then
+                                Response.Redirect("home.aspx")
+                            Else
+                                Response.Redirect("student_main.html")
+                            End If
 
                         End If
                     End If

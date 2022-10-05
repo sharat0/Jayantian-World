@@ -14,9 +14,10 @@ Public Class payment
         Dim cno As String = Request.Form("card")
         Dim cvv As String = Request.Form("cvv")
         If Len(cno) <> 10 Then
-            MsgBox("Enter Correct Card Details")
+            ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(Enter Correct Card Details');", True)
+
         ElseIf Len(cvv) <> 3 Then
-            MsgBox("Enter Correct Card Details")
+            ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(Enter Correct Card Details');", True)
 
         Else
             con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"

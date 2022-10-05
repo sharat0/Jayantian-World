@@ -46,6 +46,14 @@
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="QrCodeGenerator, Version=1.6.0.0, Culture=neutral, PublicKeyToken=6aa6bd7a159d47c2, processorArchitecture=MSIL">
+      <HintPath>..\packages\Net.Codecrete.QrCodeGenerator.2.0.3\lib\netstandard2.0\QrCodeGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="QRCoder, Version=1.4.3.0, Culture=neutral, PublicKeyToken=c4ed5b9ae8358a28, processorArchitecture=MSIL">
+      <HintPath>..\packages\QRCoder.1.4.3\lib\net40\QRCoder.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -99,6 +107,7 @@
     <Reference Include="Microsoft.AspNet.FriendlyUrls">
       <HintPath>..\packages\Microsoft.AspNet.FriendlyUrls.Core.1.0.2\lib\net45\Microsoft.AspNet.FriendlyUrls.dll</HintPath>
     </Reference>
+    <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
@@ -133,7 +142,9 @@
     <Content Include="About.aspx" />
     <Content Include="add_rem.aspx" />
     <Content Include="accepted.aspx" />
+    <Content Include="forum.aspx" />
     <Content Include="pending.aspx" />
+    <Content Include="id_card.aspx" />
     <Content Include="rejected.aspx" />
     <Content Include="admission.aspx" />
     <Content Include="App_Data\Jayantian.mdf" />
@@ -217,11 +228,25 @@
       <DependentUpon>accepted.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="forum.aspx.designer.vb">
+      <DependentUpon>forum.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="forum.aspx.vb">
+      <DependentUpon>forum.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="pending.aspx.designer.vb">
       <DependentUpon>pending.aspx</DependentUpon>
     </Compile>
     <Compile Include="pending.aspx.vb">
       <DependentUpon>pending.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="id_card.aspx.designer.vb">
+      <DependentUpon>id_card.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="id_card.aspx.vb">
+      <DependentUpon>id_card.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="rejected.aspx.designer.vb">

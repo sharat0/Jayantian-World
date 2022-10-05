@@ -35,8 +35,10 @@ Public Class home
             sta = dr("app_status")
             If sta = 0 Then
                 sta_txt = "Application Pending"
+            ElseIf sta = 2 Then
+                sta_txt = "Application Rejected"
             Else
-                sta_txt = "Selected"
+                sta_txt = "Approved"
             End If
 
             name.Text = nm

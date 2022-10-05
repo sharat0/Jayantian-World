@@ -31,7 +31,6 @@ form{
     margin-left: 20%;
     padding-left: 15%;
     padding-top: 20px;
-	margin-top: 4%;
 }
 
 .lable {

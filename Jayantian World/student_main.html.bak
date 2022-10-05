@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page | Student</title>
+
+    <!-- GOOGLE FONTS CDN -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="css/student.css">
+</head>
+<body>
+    <div id="main">
+        <span class="head">Kristu Jayanti College</span>
+        <span class="label">
+            <a href="https://www.kristujayanti.edu.in" target="_blank" rel="noopener noreferrer">College Official Site</a>
+            </span>
+            <br>
+            <span class="label">
+                <a href="id_card.aspx" target="_blank" rel="noopener noreferrer">Virtual ID Card</a>
+            </span>
+            <br>
+            <span class="label">
+            <a href="query.html" target="_blank" rel="noopener noreferrer">Ask Query</a>
+            </span>
+            <br>
+            <span class="label">
+            <a href="https://www.kristujayantiexamlms.com" target="_blank" rel="noopener noreferrer">LMS</a>
+            </span>
+            <br>
+            <span class="label">
+            <a href="https://www.https://www.tcsion.com/SelfServices/" target="_blank" rel="noopener noreferrer">TCS ION</a>
+            </span>
+            <br>
+            <span class="label">
+            <a href="logout.aspx" target="_blank" rel="noopener noreferrer">Logout</a>
+            </span>
+        </span>
+    </div>
+</body>
+</html>

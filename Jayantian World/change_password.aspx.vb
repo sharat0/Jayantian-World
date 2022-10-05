@@ -37,10 +37,8 @@ Public Class chage_password
         fcnpass = Request.Form("cnpass")
 
         If pass <> fcpass Then
-            MsgBox("Password does not match to existing password")
             ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Password does not match to existing password');", True)
         ElseIf fnpass <> fcnpass Then
-            MsgBox("new password and confirm new password does not match")
             ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('new password and confirm new password does not match');", True)
         Else
             con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
@@ -50,7 +48,7 @@ Public Class chage_password
             cmd.ExecuteNonQuery()
             con.Close()
             ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Password Updated Successfully');", True)
-            MsgBox("Password Updated Successfully")
+
             If Session("adm") = 1 Then
                 Response.Redirect("admin.aspx")
             Else
@@ -82,14 +80,14 @@ Public Class chage_password
             Dim Smtp_Server As New SmtpClient
             Dim e_mail As New MailMessage()
             Smtp_Server.UseDefaultCredentials = False
-            Smtp_Server.Credentials = New Net.NetworkCredential("kjcadmission01@gmail.com", "F1vp2DrScdwmC4qt")
+            Smtp_Server.Credentials = New System.Net.NetworkCredential("kjcadmission01@gmail.com", "F1vp2DrScdwmC4qt")
             Smtp_Server.Port = 587
             Smtp_Server.EnableSsl = True
             Smtp_Server.Host = "smtp-relay.sendinblue.com"
 
             e_mail = New MailMessage()
             e_mail.From = New MailAddress("kjcadmission01@gmail.com")
-            e_mail.To.Add(Mail)
+            e_mail.To.Add(mail)
             e_mail.Subject = "Password Updated Successfully"
             e_mail.IsBodyHtml = True
             e_mail.Body = "<html>
