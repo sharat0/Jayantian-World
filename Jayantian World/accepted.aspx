@@ -27,7 +27,7 @@
             box-sizing: border-box;
         }
 
-        .head {
+        #head {
             display: block;
             text-align: center;
             font-family: 'Open Sans', sans-serif;

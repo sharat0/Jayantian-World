@@ -17,6 +17,10 @@ Public Class Form1
         Dim type As String = branch.SelectedValue
         Dim fee As Integer
         Dim id As String = DateTime.Now.ToString("yy") + "KJ"
+        Dim age As Integer
+        age = Today.Year - dt.Year
+
+
 
         If program = "pg" Then
             fee = 700
@@ -25,7 +29,11 @@ Public Class Form1
         End If
         If phone.Length <> 10 Then
             ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Please enter a valid Phone Number');", True)
+        ElseIf age < 1 Then
+            age -= 1
+            ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Age below 16 years not acceptale.');", True)
         Else
+
             Session("fee") = fee
             con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
             con.Open()
@@ -80,6 +88,7 @@ Public Class Form1
 
             End Try
         End If
+
 
 
     End Sub

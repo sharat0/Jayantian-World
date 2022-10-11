@@ -78,11 +78,20 @@ Public Class forum
         con.Open()
         cmd.Connection = con
 
-        cmd.CommandText = "SELECT * from form1 where id= '" + id + "'"
-        dr = cmd.ExecuteReader
-        dr.Read()
-        name = dr("name")
-        con.Close()
+        If Session("adm") = 1 Then
+            cmd.CommandText = "SELECT * from login where id= '" + id + "'"
+            dr = cmd.ExecuteReader
+            dr.Read()
+            name = dr("name")
+            con.Close()
+        Else
+            cmd.CommandText = "SELECT * from form1 where id= '" + id + "'"
+            dr = cmd.ExecuteReader
+            dr.Read()
+            name = dr("name")
+            con.Close()
+
+        End If
 
         con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
         con.Open()

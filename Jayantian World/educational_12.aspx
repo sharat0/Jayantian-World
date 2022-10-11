@@ -89,8 +89,8 @@
                 <tr>
                     <td>
                         <asp:DropDownList ID="subj2" runat="server" required>
-                            <asp:ListItem Value="physics" Text="Physics" />
                             <asp:ListItem Value="chemistry" Text="Chemistry" />
+                            <asp:ListItem Value="physics" Text="Physics" />
                             <asp:ListItem Value="maths" Text="Maths" />
                             <asp:ListItem Value="biology" Text="Biology" />
                             <asp:ListItem Value="hindi" Text="Hindi" />
@@ -111,9 +111,9 @@
                 <tr>
                     <td>
                         <asp:DropDownList ID="subj3" runat="server" required>
+                            <asp:ListItem Value="maths" Text="Maths" />
                             <asp:ListItem Value="physics" Text="Physics" />
                             <asp:ListItem Value="chemistry" Text="Chemistry" />
-                            <asp:ListItem Value="maths" Text="Maths" />
                             <asp:ListItem Value="biology" Text="Biology" />
                             <asp:ListItem Value="hindi" Text="Hindi" />
                             <asp:ListItem Value="english" Text="English" />
@@ -133,10 +133,10 @@
                 <tr>
                     <td>
                         <asp:DropDownList ID="subj4" runat="server" required>
+                            <asp:ListItem Value="biology" Text="Biology" />
                             <asp:ListItem Value="physics" Text="Physics" />
                             <asp:ListItem Value="chemistry" Text="Chemistry" />
                             <asp:ListItem Value="maths" Text="Maths" />
-                            <asp:ListItem Value="biology" Text="Biology" />
                             <asp:ListItem Value="hindi" Text="Hindi" />
                             <asp:ListItem Value="english" Text="English" />
                             <asp:ListItem Value="accountancy" Text="Accountancy" />
@@ -155,12 +155,12 @@
                 <tr>
                     <td>
                         <asp:DropDownList ID="subj5" runat="server" required>
+                            <asp:ListItem Value="english" Text="English" />
                             <asp:ListItem Value="physics" Text="Physics" />
                             <asp:ListItem Value="chemistry" Text="Chemistry" />
                             <asp:ListItem Value="maths" Text="Maths" />
                             <asp:ListItem Value="biology" Text="Biology" />
                             <asp:ListItem Value="hindi" Text="Hindi" />
-                            <asp:ListItem Value="english" Text="English" />
                             <asp:ListItem Value="accountancy" Text="Accountancy" />
                             <asp:ListItem Value="business" Text="Business Studies" />
                             <asp:ListItem Value="economics" Text="Economics" />

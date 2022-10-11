@@ -55,6 +55,7 @@
                 <asp:ListItem Text="Post Graduate" Value="pg" />
                 <asp:ListItem Text="Law" Value="law" />
             </asp:DropDownList>
+            <br />
 
             <span class="label">Branch: </span>
             <asp:DropDownList ID="branch" runat="server" required>
@@ -89,12 +90,7 @@
                 <option value="card">Card</option>
             </select>
             <br>
-            <span class="label">Application Fee: </span>
-
-            <br>
-            <asp:Label ID="fee" runat="server"></asp:Label>
-
-            <br />
+            
             <asp:Button ID="submit" runat="server" Text="Submit" ToolTip="Submit" />
         </form>
     </div>

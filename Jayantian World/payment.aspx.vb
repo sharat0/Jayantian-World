@@ -13,12 +13,19 @@ Public Class payment
         Dim id As String
         Dim cno As String = Request.Form("card")
         Dim cvv As String = Request.Form("cvv")
+        Dim dt As Date = Request.Form("expiry")
+        Dim exp As Integer
+        exp = dt.Year
+
         If Len(cno) <> 10 Then
             ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(Enter Correct Card Details');", True)
 
         ElseIf Len(cvv) <> 3 Then
             ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(Enter Correct Card Details');", True)
-
+            MsgBox("Enter Correct Card Details")
+        ElseIf exp < Today.Year Then
+            exp -= 1
+            ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Card already expired!');", True)
         Else
             con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
             con.Open()
