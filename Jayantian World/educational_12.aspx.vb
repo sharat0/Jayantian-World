@@ -8,6 +8,14 @@ Public Class educational_12
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Session("id") = Nothing Then
             Response.Redirect("login.aspx")
+        ElseIf Session("stage") = 1 Then
+            Response.Redirect("personal_details.aspx")
+        ElseIf Session("stage") = 2 Then
+            Response.Redirect("educational.aspx")
+        ElseIf Session("stage") = 4 Then
+            Response.Redirect("home.aspx")
+        ElseIf Session("stage") = 5 Then
+            Response.Redirect("student_main.html")
         End If
     End Sub
 

@@ -40,13 +40,13 @@
         <form id="form1" runat="server">
             <span class="head">Change Password</span>
             <span class="lable">Current Password</span>
-            <input type="password" placeholder="*********" name="cpass" id="cpass">
+            <input type="password" placeholder="*********" name="cpass" id="cpass"/>
 
             <span class="lable">New Password</span>
-            <input type="password" placeholder="*********" name="npass" id="npass">
+            <input type="password" placeholder="*********" name="npass" id="npass"/>
 
             <span class="lable">Confirm New Password</span>
-            <input type="password" placeholder="*********" name="cnpass" id="cnpass">
+            <input type="password" placeholder="*********" name="cnpass" id="cnpass"/>
 
             <asp:Button ID="change" runat="server" Text="Change" ToolTip="Submit" />
         </form>

@@ -103,6 +103,7 @@ Public Class login
 
                 temp2 = dr("cnt")
                 If temp2 = 0 Then
+                    Session("stage") = 1
                     Response.Redirect("personal_details.aspx")
                 Else
                     con.Close()
@@ -117,6 +118,7 @@ Public Class login
                     con.Close()
 
                     If temp3 = 0 Then
+                        Session("stage") = 2
                         Response.Redirect("educational.aspx")
 
                     Else
@@ -128,11 +130,14 @@ Public Class login
                         dr.Read()
                         temp4 = dr("cnt")
                         If temp4 = 0 Then
+                            Session("stage") = 3
                             Response.Redirect("educational_12.aspx")
                         Else
                             If status = 0 Or status = 2 Then
+                                Session("stage") = 4
                                 Response.Redirect("home.aspx")
                             Else
+                                Session("stage") = 5
                                 Response.Redirect("student_main.html")
                             End If
 

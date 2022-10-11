@@ -10,12 +10,12 @@ Public Class add_rem
             Response.Redirect("login.aspx")
 
         ElseIf Session("adm") = Nothing Then
-            Response.Redirect("restricted.aspx")
+            Response.Redirect("restricted.html")
 
         ElseIf Session("branch") <> "admin" Then
-            Response.Redirect("restricted.aspx")
+            Response.Redirect("restricted.html")
         Else
-
+            Dim id As String = Session("id")
         End If
 
 

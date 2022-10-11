@@ -7,6 +7,14 @@ Public Class educational
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Session("id") = Nothing Then
             Response.Redirect("login.aspx")
+        ElseIf Session("stage") = 1 Then
+            Response.Redirect("personal_details.aspx")
+        ElseIf Session("stage") = 3 Then
+            Response.Redirect("educational_12.aspx")
+        ElseIf Session("stage") = 4 Then
+            Response.Redirect("home.aspx")
+        ElseIf Session("stage") = 5 Then
+            Response.Redirect("student_main.html")
         End If
     End Sub
 
@@ -18,7 +26,6 @@ Public Class educational
         Dim max As String = Request.Form("max_marks")
         Dim percent As String = Request.Form("percentage")
         Dim pass As String = Request.Form("pass_year")
-        'Dim board As String = Request.Form("")
         Dim board As String = boards.SelectedValue
 
         Dim state As String = Request.Form("state")

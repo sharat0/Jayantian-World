@@ -13,9 +13,9 @@ Public Class approved
         If Session("id") = Nothing Then
             Response.Redirect("login.aspx")
         ElseIf Session("adm") = Nothing Then
-            Response.Redirect("forbidden.aspx")
+            Response.Redirect("forbidden.html")
         ElseIf Session("branch") = Nothing Then
-            Response.Redirect("forbidden.aspx")
+            Response.Redirect("forbidden.html")
 
         Else
             type = Session("branch")

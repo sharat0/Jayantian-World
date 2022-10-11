@@ -9,6 +9,14 @@ Public Class home
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Session("id") = Nothing Then
             Response.Redirect("login.aspx")
+        ElseIf Session("stage") = 1 Then
+            Response.Redirect("personal_details.aspx")
+        ElseIf Session("stage") = 3 Then
+            Response.Redirect("educational_12.aspx")
+        ElseIf Session("stage") = 4 Then
+            Response.Redirect("home.aspx")
+        ElseIf Session("stage") = 5 Then
+            Response.Redirect("student_main.html")
         Else
             Dim id As String = Session("id")
             con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"

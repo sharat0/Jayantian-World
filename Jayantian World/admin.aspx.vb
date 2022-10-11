@@ -13,7 +13,7 @@ Public Class test
             Response.Redirect("login.aspx")
 
         ElseIf Session("adm") = Nothing Then
-            Response.Redirect("restricted.aspx")
+            Response.Redirect("restricted.html")
 
         Else
 
