@@ -11,10 +11,10 @@ Public Class home
             Response.Redirect("login.aspx")
         ElseIf Session("stage") = 1 Then
             Response.Redirect("personal_details.aspx")
+        ElseIf Session("stage") = 2 Then
+            Response.Redirect("educational.aspx")
         ElseIf Session("stage") = 3 Then
             Response.Redirect("educational_12.aspx")
-        ElseIf Session("stage") = 4 Then
-            Response.Redirect("home.aspx")
         ElseIf Session("stage") = 5 Then
             Response.Redirect("student_main.html")
         Else

@@ -68,6 +68,33 @@ Partial Public Class id_card
     Protected WithEvents rno As Global.System.Web.UI.WebControls.Label
 
     '''<summary>
+    '''FileUpload1 control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents FileUpload1 As Global.System.Web.UI.WebControls.FileUpload
+
+    '''<summary>
+    '''btnUpload control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents btnUpload As Global.System.Web.UI.WebControls.Button
+
+    '''<summary>
+    '''gvImages control.
+    '''</summary>
+    '''<remarks>
+    '''Auto-generated field.
+    '''To modify move field declaration from designer file to code-behind file.
+    '''</remarks>
+    Protected WithEvents gvImages As Global.System.Web.UI.WebControls.GridView
+
+    '''<summary>
     '''address control.
     '''</summary>
     '''<remarks>

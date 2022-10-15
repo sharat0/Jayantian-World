@@ -68,7 +68,7 @@ Public Class educational_12
         cmd.CommandText = "insert into edu_12 (id, board, state, institute, medium, pass_year, reg_no, sub1, sub2, sub3, sub4, sub5, sub6, m1, m2, m3, m4, m5, m6, tm1, tm2, tm3, tm4, tm5, tm6, total, max, per) values ('" + id + "', '" + boards + "','" + state + "' , '" + inst + "', '" + med + "', '" + pass_yr + "','" + reg + "', '" + sub1 + "','" + sub2 + "','" + sub3 + "', '" + sub4 + "', '" + sub5 + "', '" + sub6 + "', '" + mar1 + "', '" + mar2 + "', '" + mar3 + "', '" + mar4 + "', '" + mar5 + "', '" + mar6 + "', '" + tm1 + "', '" + tm2 + "', '" + tm3 + "', '" + tm4 + "', '" + tm5 + "', '" + tm6 + "', '" + total + "', '" + max + "', '" + per + "')"
         cmd.ExecuteNonQuery()
         con.Close()
-
+        Session("stage") = 4
         con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
         con.Open()
         cmd.Connection = con

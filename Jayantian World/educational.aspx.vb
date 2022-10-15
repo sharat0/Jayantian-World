@@ -38,8 +38,9 @@ Public Class educational
 
         cmd.CommandText = "Insert into edu_10(id, total_m,max,per, pass_year, board,state) values('" + id + "', '" + total + "', '" + max + "', '" + percent + "', '" + pass + "', '" + board + "', '" + state + "')"
         cmd.ExecuteNonQuery()
-        Response.Redirect("educational_12.aspx")
         con.Close()
+        Session("stage") = 3
+        Response.Redirect("educational_12.aspx")
 
 
     End Sub

@@ -102,6 +102,30 @@
             padding-top: 2vh;
             padding-left: 3%;
         }
+
+        #upload{
+            float:right;
+            height:70px;
+            width:70px;
+        }
+
+        #id_img{
+            float: right;
+            height: 109px;
+            width: 70px;
+            position: absolute;
+            top: 330px;
+            margin-left: 175px;
+        }
+
+        img{
+            float:right;
+            height:130px;
+            width:110px;
+        }
+        th{
+            display: none;
+        }
     </style>
 </head>
 <body>
@@ -130,6 +154,21 @@
                         <br>
                         <span class="label">Register Number:</span>
                         <asp:Label ID="rno" runat="server" class="data"></asp:Label>
+
+                        <div id="upload">
+                        <asp:FileUpload ID="FileUpload1" runat="server" />
+                        <asp:Button ID="btnUpload" runat="server" Text="Upload" OnClick = "Upload" />
+                        </div>
+
+                        <div id="id_img">
+                        <asp:GridView ID="gvImages" runat="server" AutoGenerateColumns="false">
+                            <Columns>
+                                <asp:ImageField DataImageUrlField="Path" HeaderText="" ItemStyle-Height="70px" ItemStyle-Width="70px"/>
+                            </Columns>
+                        </asp:GridView>
+                            </div>
+                        <div id="dialog" style="display: none">
+                        </div>
 
                         <br>
                     </div>
@@ -165,5 +204,16 @@
         </div>
     </form>
 </body>
+    <script type="text/javascript">
+        var totalRowCount = 0;
+        var rowCount = 0;
+        var gridView = document.getElementById("gvImages");
+        var rows = gridView.getElementsByTagName("tr")
+        if (rows.length > 0) {
+            document.getElementById("FileUpload1").style.display = "none";
+            document.getElementById("btnUpload").style.display = "none";
+        }
 
+   
+    </script>
 </html>

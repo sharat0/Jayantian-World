@@ -55,12 +55,13 @@ Public Class login
 
                 Session("id") = uid
                 Session("regno") = dbid
-
             Else
-                ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(' Invalid Login ');", True)
+                MsgBox("Invalid Login")
+                'ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(' Invalid Login ');", True)
             End If
         Catch ex As Exception
-            ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('No data found');", True)
+            MsgBox("No Data Found!")
+            'ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('No data found');", True)
         End Try
 
 

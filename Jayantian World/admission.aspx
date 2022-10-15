@@ -23,7 +23,177 @@
     <script/ src="https://kit.fontawesome.com/6d20788c52.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/nav.css"/>
-    <link rel="stylesheet" href="css/adm.css"/>
+    <style>
+        
+/* SETTING FONT FOR PARAGRAPH */
+p {
+    font-family: 'Hind', sans-serif;
+    text-align: justify;
+}
+
+/* BODY STARTS */
+
+.head {
+    display: block;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 44px;
+    font-weight: bold;
+    padding-top: 20px;
+}
+
+.head2{
+    display: block;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 36px;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 30px;
+}
+
+.head3{
+    display: block;
+    font-size: 28px;
+    margin: 0 10%;
+    text-align: center;
+}
+
+.head4{
+    display: block;
+    font-size: 28px;
+    margin: 2% 5%;
+}
+
+.head5{
+    display: block;
+    font-size: 24px;
+    margin: 2% 5%;   
+    text-align: center;
+    font-weight: bold;
+    text-decoration: underline 2px #000;
+}
+
+#main_head{
+    background: url(img/fact_bg.jpg);
+     background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#images_ug{
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    
+    background-color: rgb(240, 246, 252);
+}
+
+#img1, #img2, #img3{
+    display: inline-block;
+    width: 30%;
+    margin-left: 15px;
+}
+
+#img2{
+    width: 35%;
+}
+
+.flex_container{
+    display: flex;
+    padding-bottom: 50px;
+}
+
+.left{
+    width: 50%;
+}
+
+.ug_p{
+    padding: 0px 30px;
+}
+
+.fee{
+    width: 40%;
+    height: 100%;
+    margin-left: 5%;
+    background-color: aliceblue;
+}
+
+.fee ul li{
+    list-style-type: none;
+    text-align: center;
+    padding: 5px 0;
+    text-decoration: underline 5px #fff;
+}
+
+.apply{
+    display: inline-block;
+    text-align: center;
+    padding: 10px 15px;
+    margin-left: 35%;
+    margin-top: 30px;
+    background-color: rgb(90, 172, 248);
+    border-radius: 5px;
+}
+
+.apply a{
+    text-decoration: none;
+    color: #fff;
+    text-shadow: 1px 1px 2px #000;
+    font-size: 22px;
+}
+
+.rank_img{
+    width: 90%;
+    height: 350px;
+}
+
+.ug_adm{
+    width: 50%;
+    height: 100%;
+    margin-left: 2%;
+}
+
+
+/* POST GRADUATE STARTS */
+
+.pg_programme{
+    flex-direction: row-reverse;
+}
+
+
+/* ADMISSION PROCESS BEGINS */
+
+#process .left{
+    width: 60%;
+}
+
+#process .right{
+    width: 40%;
+    background-color: rgb(250, 243, 243);
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#adm_img{
+    padding-left: 5%;
+    width: 100%;
+}
+
+#assistance{
+    display: block;
+    text-align: center;
+    font-size: 22px;
+    padding: 20px 30px;
+}
+
+#process ul li{
+    list-style-type: none;
+    text-align: center;
+}
+
+    </style>
 
     <style>
         img.rank_img {
@@ -48,8 +218,10 @@
     </div>
 
     <div id="main">
+        <div id="main_head">
         <span class="head">Admission</span>
         <span class="head3">Explore the possibilities of a Jayantian Student</span>
+            </div>
         <div id="images_ug">
             <img src="img/adm/img_1.jpg" alt="Image1" id="img1"/>
             <img src="img/adm/img2.jpg" alt="Image2" id="img2"/>

@@ -23,7 +23,318 @@
     <script src="https://kit.fontawesome.com/6d20788c52.js" crossorigin="anonymous"></script>
 
     <link rel="stylesheet" href="css/nav.css" />
-    <link rel="stylesheet" href="style.css" />
+    <style>
+        /* FIRST MAIN DIV AFTER NAV STARTS */
+
+
+#overview {
+    background: url(img/fact_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    min-height: 500px;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+}
+
+.flex_container {
+    display: flex;
+}
+
+#p_head{
+    font-size: 36px;
+    padding: 22% 15%;
+    padding-bottom: 30px;
+    line-height: 50px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: bold;
+}
+
+#p_body{
+    margin: 4% 8%;
+    line-height: 25px;
+    font-size: 20px;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+
+.left {
+    flex: 1;
+    width: 50%;
+}
+
+.word {
+    color: rgb(80, 80, 248);
+}
+
+.right {
+    width: 50%;
+}
+
+#img1{
+    margin-top: 15px;
+    width: 40%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 15px rgb(0, 0, 29);
+    display: inline-block;
+}
+
+#img2{
+    margin-top: 20px;
+    margin-left: 20px;
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 2px 2px 25px rgb(0, 0, 29);
+    display: inline-block;
+}
+#img3{
+    margin-top: 20px;
+    margin-left: 20%;
+    width: 50%;
+    border-radius: 5px;
+    box-shadow: 5px 5px 25px rgb(0, 0, 0);
+    display: inline-block;
+
+}
+
+.home_img{
+    transition: transform .3s ease;
+}
+
+.home_img:hover{
+    transform: scale(1.1,1.1);
+}
+
+
+/* STUDENT SUPPORT BLOCK STARTS */
+
+/* HEADINGS */
+.head {
+    display: block;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 34px;
+    font-weight: bold;
+    text-decoration: underline 2px #000;
+    margin-bottom: 30px;
+    padding-top: 20px;
+}
+
+.support_box {
+    display: flex;
+    padding-bottom: 70px;
+}
+
+.supports {
+    display: block;
+    width: 17%;
+    margin-left: 2%;
+    background-color: rgb(240 246 252);
+    height: 170px;
+    text-align: center;
+    padding: 20px 15px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+
+.supports:hover {
+    box-shadow: 2px 2px 25px #000;
+    transform: translateY(-10px);
+}
+
+.supports i {
+    font-size: 30px;
+    background-color: #fff;
+    color: #000;
+    padding: 20px 20px;
+    border-radius: 25%;
+    margin-bottom: 10px;
+}
+
+.box_head {
+    font-size: 18px;
+}
+
+
+
+/* ABOUT DIV STARTS */
+
+#about {
+    padding-bottom: 40px;
+    background: url(img/fact_bg.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+#about p {
+    margin: 0px 8%;
+    line-height: 25px;
+    font-size: 18px;
+    padding-bottom: 20px;
+    text-align: justify;
+}
+
+#about img {
+    margin-top: 7%;
+    margin-left: 3%;
+    width: 90%;
+    height: 450px;
+    border-radius: 10px;
+    box-shadow: 4px 4px 10px rgb(80, 80, 248);
+}
+
+.more {
+    display: inline-block;
+    text-align: center;
+    font-size: 22px;
+    background-color: #439aff;
+    margin-left: 40%;
+    padding: 5px 20px;
+    padding-bottom: 0px;
+    border-radius: 5px;
+    transition: all .5s ease-in;
+    box-shadow: 2px 2px 10px rgb(99, 206, 255);
+}
+
+.more a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.more:hover {
+    background-color: #248aff;
+    transform: translateY(-2px);
+}
+
+.more i {
+    font-size: 18px;
+    background-color: transparent;
+    animation: arrow 1s ease-in-out infinite;
+    padding-left: 15px;
+    color: #fff;
+}
+
+@keyframes arrow {
+    0% {
+        transform: translateX(0px) rotate(270deg);
+    }
+
+    100% {
+        transform: translate(10px) rotate(270deg);
+    }
+}
+
+
+/* ABOUT ENDS */
+
+
+/* ADMISSION STARTS */
+
+
+#admission {
+    padding-bottom: 30px;
+}
+
+#head_p {
+    font-size: 22px;
+    margin: 0 20%;
+    text-align: center;
+}
+
+#myVideo {
+    margin-top: 20px;
+    margin-left: 7%;
+    min-width: 90%;
+    width: 90%;
+    height: 550px;
+    min-height: 50%;
+}
+
+.adm_box_head {
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 2% 5%;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+.adm_p {
+    text-align: justify;
+    padding: 1% 5%;
+    font-size: 19px;
+}
+
+#admission-more {
+    display: inline-block;
+    margin-left: 40%;
+    margin-top: 25px;
+    min-width: 10%;
+    background-color: #248aff;
+    padding: 10px 20px;
+    transition: all .3s ease-in-out;
+}
+
+#admission-more:hover {
+    background-color: #0479ff;
+}
+
+#admission-more a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+/* ADMISSION ENDS */
+
+/* FACTS BEGINS */
+
+#fact {
+    padding: 3% 0;
+    /* color: #fff; */
+    background-color: #ffffff;
+    background-image: url("img/fact_bg.jpg");
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: cover;
+    box-shadow: 0px 0px 10px #000;
+}
+
+#facts {
+    display: flex;
+    /* background-color: rgb(67, 154, 255, 0.7); */
+}
+
+.count {
+    width: 15%;
+    margin: 1% 2%;
+    text-align: center;
+}
+
+.cnt_head {
+    display: block;
+    font-size: 24px;
+    /* text-decoration: underline 2px black; */
+    border-bottom: 2px solid #fff;
+}
+
+.cnt-value {
+    display: block;
+    font-size: 28px;
+    font-weight: bold;
+    padding-top: 10px;
+}
+
+
+
+    </style>
 
     <title>Jayantian World</title>
 </head>

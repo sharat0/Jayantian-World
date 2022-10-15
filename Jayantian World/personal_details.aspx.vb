@@ -95,37 +95,41 @@ Public Class personal_details
         Dim locgurd As String = Request.Form("loc-gur")
         Dim annincome As String = Request.Form("income")
 
-
-        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
-        con.Open()
-        cmd.Connection = con
-        cmd.CommandText = "insert into course_det (id, cat, department, course, add_lang) values ('" + id + "', '" + ccat + "','" + dept + "' , '" + course + "', '" + addlang + "')"
-        cmd.ExecuteNonQuery()
-        con.Close()
+        If IsNumeric(lang1) Or IsNumeric(lang2) Or IsNumeric(lang3) Or IsNumeric(lang4) Or IsNumeric(lang5) Or IsNumeric(mname) Or IsNumeric(fname) Or IsNumeric(locgurd) Then
+            ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Please enter valid details.');", True)
+        Else
 
 
-        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
-        con.Open()
-        cmd.Connection = con
+            con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
+            con.Open()
+            cmd.Connection = con
+            cmd.CommandText = "insert into course_det (id, cat, department, course, add_lang) values ('" + id + "', '" + ccat + "','" + dept + "' , '" + course + "', '" + addlang + "')"
+            cmd.ExecuteNonQuery()
+            con.Close()
 
-        'cmd.CommandText = "insert into per_det (Id, gender, btown, bstate, peradd, curadd, lang1, lang2, lang3, lang4, lang5) values ('" + id + "', '" + gend + "','" + brtown + "' , '" + brstate + "', '" + peradd + "', '" + curadd + "', '" + lang1 + "', '" + lang2 + "', '" + lang3 + "', '" + lang4 + "', '" + lang5 + "')"
-        cmd.CommandText = "insert into per_det (Id, gender, btown, bstate, peradd, curadd, lang1, lang2, lang3, lang4, lang5) values (@id, @gender, @btown, @bstate, @peradd, @curadd, @lang1, @lang2, @lang3, @lang4, @lang5)"
-        cmd.Parameters.Add("@id", SqlDbType.Int).Value = id
-        cmd.Parameters.Add("@gender", SqlDbType.VarChar).Value = gend
-        cmd.Parameters.Add("@btown", SqlDbType.VarChar).Value = brtown
-        cmd.Parameters.Add("@bstate", SqlDbType.VarChar).Value = brstate
-        cmd.Parameters.Add("@peradd", SqlDbType.VarChar).Value = peradd
-        cmd.Parameters.Add("@curadd", SqlDbType.VarChar).Value = curadd
-        cmd.Parameters.Add("@lang1", SqlDbType.VarChar).Value = lang1
-        cmd.Parameters.Add("@lang2", SqlDbType.VarChar).Value = lang2
-        cmd.Parameters.Add("@lang3", SqlDbType.VarChar).Value = lang3
-        cmd.Parameters.Add("@lang4", SqlDbType.VarChar).Value = lang4
-        cmd.Parameters.Add("@lang5", SqlDbType.VarChar).Value = lang5
-        cmd.ExecuteNonQuery()
 
-        ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(' Data updated successfully ');", True)
-        con.Close()
-        Response.Redirect("educational.aspx")
+            con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
+            con.Open()
+            cmd.Connection = con
 
+            'cmd.CommandText = "insert into per_det (Id, gender, btown, bstate, peradd, curadd, lang1, lang2, lang3, lang4, lang5) values ('" + id + "', '" + gend + "','" + brtown + "' , '" + brstate + "', '" + peradd + "', '" + curadd + "', '" + lang1 + "', '" + lang2 + "', '" + lang3 + "', '" + lang4 + "', '" + lang5 + "')"
+            cmd.CommandText = "insert into per_det (Id, gender, btown, bstate, peradd, curadd, lang1, lang2, lang3, lang4, lang5) values (@id, @gender, @btown, @bstate, @peradd, @curadd, @lang1, @lang2, @lang3, @lang4, @lang5)"
+            cmd.Parameters.Add("@id", SqlDbType.Int).Value = id
+            cmd.Parameters.Add("@gender", SqlDbType.VarChar).Value = gend
+            cmd.Parameters.Add("@btown", SqlDbType.VarChar).Value = brtown
+            cmd.Parameters.Add("@bstate", SqlDbType.VarChar).Value = brstate
+            cmd.Parameters.Add("@peradd", SqlDbType.VarChar).Value = peradd
+            cmd.Parameters.Add("@curadd", SqlDbType.VarChar).Value = curadd
+            cmd.Parameters.Add("@lang1", SqlDbType.VarChar).Value = lang1
+            cmd.Parameters.Add("@lang2", SqlDbType.VarChar).Value = lang2
+            cmd.Parameters.Add("@lang3", SqlDbType.VarChar).Value = lang3
+            cmd.Parameters.Add("@lang4", SqlDbType.VarChar).Value = lang4
+            cmd.Parameters.Add("@lang5", SqlDbType.VarChar).Value = lang5
+            cmd.ExecuteNonQuery()
+            con.Close()
+
+            Session("stage") = 2
+            Response.Redirect("educational.aspx")
+        End If
     End Sub
 End Class
