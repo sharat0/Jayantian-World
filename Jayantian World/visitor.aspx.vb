@@ -28,12 +28,11 @@ Public Class visitor
             con.Open()
 
             cmd.Connection = con
-            cmd.CommandText = "Insert into visitor (name, email, phone, purpose, dt) values (@nm, @mail, @ph, @purpose, @dat)"
+            cmd.CommandText = "Insert into visitor (name, email, phone, purpose, dt) values (@nm, @mail, @ph, @purpose)"
             cmd.Parameters.Add("@nm", SqlDbType.VarChar).Value = name
             cmd.Parameters.Add("@mail", SqlDbType.VarChar).Value = email
             cmd.Parameters.Add("@ph", SqlDbType.VarChar).Value = phone
             cmd.Parameters.Add("@purpose", SqlDbType.VarChar).Value = purp
-            cmd.Parameters.Add("@dat", SqlDbType.Date).Value = dtnow
             cmd.ExecuteNonQuery()
 
             cmd.CommandText = "select id from visitor where id=(select max(id) from visitor)"
@@ -60,9 +59,8 @@ Public Class visitor
     End Sub
 
     Public Sub send_mail(ByRef id As String)
-        Dim uid As String = DateTime.Now.ToString("yy") + "KJ"
         Dim name As String
-        Dim pass As String
+        Dim uid As String
         Dim mail As String
 
         con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
@@ -73,8 +71,7 @@ Public Class visitor
         dr.Read()
         name = dr("name")
         mail = dr("email")
-
-        uid += CStr(id)
+        uid = dr("uid")
 
         Try
             Dim Smtp_Server As New SmtpClient
@@ -93,8 +90,11 @@ Public Class visitor
             e_mail.Body = "<html>
                                 <body>
                                     <h3>Hello " + name + "! You have successfully filled the visitor form to visit Kristu Jayanti College. </h3>
-                                    <p> You will be further notified via mail about your status for vaisitor's form.   </br>
-                                      Thank You.
+                                    <p>Your Visitor unique ID is <b>" + uid + "</b>. You can use this id to get your virtual ID card to enter college campus. <br> 
+                                        You will be further notified via mail about your status for vaisitor's form.   </br>
+                                      <br>Thank You.</p> <br><br>
+                                        <h4>Note:</h4>
+                                      <p>This ID card will be valid only for 1 day.</p>
                                 </body>
                                 </html>"
 

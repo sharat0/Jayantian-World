@@ -18,7 +18,7 @@
         }
 
         body {
-            background: url("img/personal_details/02.jpg");
+            background: url("img/personal_details/2.jpg");
             background-attachment: fixed;
             background-repeat: no-repeat;
             background-position: center;
@@ -131,6 +131,7 @@
 <body>
     <div class="navbar">
         <a href="admin.aspx">Home</a>
+        <a href="visitor_auth.aspx">Visitors</a>
         <a href="student_list.aspx">Student List</a>
         <a href="add_rem.aspx">Add/ Remove</a>
         <a href="forum.aspx">Forum</a>
