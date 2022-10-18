@@ -234,4 +234,14 @@ Public Class home
         End If
     End Sub
 
+    Protected Sub btn_Click(sender As Object, e As EventArgs) Handles btn.Click
+        If Session("id") = Nothing Then
+            Response.Redirect("login.aspx")
+        Else
+            Session.Clear()
+            Session.Abandon()
+            Response.Redirect("index.aspx")
+        End If
+    End Sub
+
 End Class

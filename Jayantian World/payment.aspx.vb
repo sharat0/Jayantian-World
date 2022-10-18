@@ -6,7 +6,7 @@ Public Class payment
     Dim cmd As New SqlCommand
     Dim dr As SqlDataReader
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
-
+        fee.Text = Session("fee")
     End Sub
 
     Protected Sub submit_Click(sender As Object, e As EventArgs) Handles submit.Click

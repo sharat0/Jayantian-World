@@ -29,7 +29,7 @@ Public Class Form1
         End If
         If phone.Length <> 10 Then
             ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Please enter a valid Phone Number');", True)
-        ElseIf age < 1 Then
+        ElseIf age < 16 Then
             age -= 1
             ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Age below 16 years not acceptale.');", True)
         Else

@@ -424,7 +424,7 @@ Public Class test
                                     <br>
                                     Thank you for applying online at Kristu Jayanti College, Autonomous, Bengaluru.
                                     <br>
-                                    You are requested to attend the Personal Interview scheduled on 07th May, 2020 at 9.00 am, in the College Campus.
+                                    You are requested to attend the Personal Interview scheduled in the College Campus.
                                     <br>
                                     Kindly report with all the available original documents published for the qualifying examinations. Result awaiting candidates can bring their 10th and 11th std marks cards. 
                                     <br>

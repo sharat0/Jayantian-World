@@ -52,7 +52,7 @@ Public Class personal_details
         cmd.Connection = con
 
         'COURSE DETAILS
-        Dim ccat As String = cat.Text
+        Dim ccat As String = UCase(cat.Text)
         Dim course As String = courses.SelectedValue
         Dim addlang As String = add_langs.SelectedValue
         Dim dept As String
