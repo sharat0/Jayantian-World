@@ -90,6 +90,7 @@
 <body>
     <div class="navbar">
         <a href="admin.aspx">Home</a>
+        <a href="visitor_auth.aspx">Visitor</a>
         <a href="student_list.aspx">Student List</a>
         <a href="add_rem.aspx">Add/ Remove</a>
         <a href="forum.aspx">Forum</a>

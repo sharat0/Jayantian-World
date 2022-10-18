@@ -212,6 +212,7 @@
     <Content Include="student_list.aspx" />
     <Content Include="visitor.aspx" />
     <Content Include="visitor_auth.aspx" />
+    <Content Include="visitor_id.aspx" />
     <Content Include="Web.config" />
     <Content Include="Bundle.config" />
   </ItemGroup>
@@ -427,6 +428,13 @@
     </Compile>
     <Compile Include="visitor_auth.aspx.vb">
       <DependentUpon>visitor_auth.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="visitor_id.aspx.designer.vb">
+      <DependentUpon>visitor_id.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="visitor_id.aspx.vb">
+      <DependentUpon>visitor_id.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
   </ItemGroup>

@@ -6,7 +6,7 @@ Public Class visitor_auth
     Dim cmd As New SqlCommand
     Dim dr As SqlDataReader
     Dim sid As String
-
+    Dim dt As Date
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         If Session("id") = Nothing Then
             Response.Redirect("login.aspx")
@@ -71,7 +71,7 @@ Public Class visitor_auth
     End Sub
 
     Protected Sub rem_Click(sender As Object, e As EventArgs) Handles [rem].Click
-        Dim dt As Date = Date.Today
+        dt = Date.Today
         dt.AddDays(2)
         con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
         con.Open()
@@ -92,7 +92,7 @@ Public Class visitor_auth
         approve_mail(sid)
 
         ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Approved');", True)
-        Response.Redirect("admin.aspx")
+        Response.Redirect("visitor_auth.aspx")
     End Sub
 
     Protected Sub add_Click(sender As Object, e As EventArgs) Handles add.Click
@@ -108,7 +108,7 @@ Public Class visitor_auth
 
 
         ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Rejected');", True)
-        Response.Redirect("admin.aspx")
+        Response.Redirect("visitor_auth.aspx")
     End Sub
 
     Public Sub reject_mail(ByRef id As String)
@@ -137,16 +137,14 @@ Public Class visitor_auth
             e_mail = New MailMessage()
             e_mail.From = New MailAddress("kjcadmission01@gmail.com")
             e_mail.To.Add(mail)
-            e_mail.Subject = "Application Rejected | Kristu Jayanti College"
+            e_mail.Subject = "Visit Application Rejected | Kristu Jayanti College"
             e_mail.IsBodyHtml = True
             e_mail.Body = "<html>
                                 <body>
                                     <p>Dear Applicant, <br>
-                                    We are writing you to inform you that, unfortunately, we are not able to offer you admission to our University. We received a record number of applications this year, and admission decisions were very difficult, as there were many incredible candidates.
-                                    <br>
+                                    We are writing you to inform you that, unfortunately, we are not able to allow you to visit our College Campus <br>
                                     Furthermore, we would like to take this time to acknowledge your accomplishments and the time you spent during this application process. We understand that you might be frustrated during this time.
-                                    <br>
-                                    Although this decision is disappointing, it is important to remember that your hard work and dedication will take you as far as you want to go.
+                                    
                                     <br><br>
                                     Sincerely,<br>
                                     Kristu Jayanti College,<br>
@@ -188,7 +186,7 @@ Public Class visitor_auth
             e_mail = New MailMessage()
             e_mail.From = New MailAddress("kjcadmission01@gmail.com")
             e_mail.To.Add(mail)
-            e_mail.Subject = "Call letter for Counselling | Kristu Jayanti College (Autonomous), Bengaluru"
+            e_mail.Subject = "Welcome to Kristu Jayati College"
             e_mail.IsBodyHtml = True
             e_mail.Body = "<html>
                                 <body>
@@ -196,6 +194,7 @@ Public Class visitor_auth
                                     <br>
                                     Thank you for applying online at Kristu Jayanti College, Autonomous, Bengaluru.
                                     <br>
+                                    You are now authorized to visit Kristu Jayanti College on " + dt + " <br><br>
                                     
                                     Kristu Jayanti College<br>
                                     Bangalore-560077 </b>

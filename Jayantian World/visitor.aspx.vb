@@ -18,7 +18,6 @@ Public Class visitor
         Dim id As String = DateTime.Now.ToString("yy") + "KJV"
         Dim mid As String
         Dim dtnow As Date = Date.Today
-
         If phone.Length <> 10 Then
             ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Please enter a valid Phone Number');", True)
 
@@ -28,7 +27,7 @@ Public Class visitor
             con.Open()
 
             cmd.Connection = con
-            cmd.CommandText = "Insert into visitor (name, email, phone, purpose, dt) values (@nm, @mail, @ph, @purpose)"
+            cmd.CommandText = "Insert into visitor (name, email, phone, purpose) values (@nm, @mail, @ph, @purpose)"
             cmd.Parameters.Add("@nm", SqlDbType.VarChar).Value = name
             cmd.Parameters.Add("@mail", SqlDbType.VarChar).Value = email
             cmd.Parameters.Add("@ph", SqlDbType.VarChar).Value = phone
@@ -50,8 +49,7 @@ Public Class visitor
             cmd.ExecuteNonQuery()
             con.Close()
 
-
-            con.Close()
+            ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Form submitted successfully.');", True)
             send_mail(mid)
 
 
@@ -104,5 +102,34 @@ Public Class visitor
         Catch error_t As Exception
             MsgBox(error_t.ToString)
         End Try
+    End Sub
+
+    Protected Sub fetch_Click(sender As Object, e As EventArgs) Handles fetch.Click
+        Dim uid As String = Request.Form("usrid")
+        con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
+        con.Open()
+        cmd.Connection = con
+        cmd.CommandText = "select status from visitor where uid= '" + uid + "'"
+        dr = cmd.ExecuteReader
+        dr.Read()
+        Dim status As Integer = dr(status)
+        dr.Close()
+        con.Close()
+
+        If status = 0 Then
+
+            ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Application Status still pending. Please come back in few hours.');", True)
+
+        ElseIf status = 1 Then
+
+            Session("visitor_id") = uid
+            Response.Redirect("visitor_id.aspx")
+
+        Else
+
+            ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('We regret to inform you that your application to visit college has been rejected.');", True)
+
+        End If
+
     End Sub
 End Class

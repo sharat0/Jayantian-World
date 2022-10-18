@@ -155,8 +155,8 @@
             <li id="nav_links"><a href="index.aspx" class="nav_link">Home</a></li>
             <li><a href="#" class="nav_link">About Us</a></li>
             <li><a href="admission.aspx" class="nav_link">Admission</a></li>
-            <li><a href="#" class="nav_link">Image Gallary</a></li>
-            <li><a href='#' class="nav_link">Contact</a></li>
+            <li><a href="visitor.aspx" class="nav_link">Visitor</a></li>
+            <li><a href='login.aspx' class="nav_link">Login</a></li>
         </ul>
     </div>
     <div id="form">
@@ -164,29 +164,29 @@
 
         <form id="form1" runat="server">
             <div id="fetch_box">
-                <input type="text" name="uid" id="uid"/>
+                <input type="text" name="usrid" id="usrid" />
                 <asp:Button ID="fetch" runat="server" Text="Fetch" />
                 <span id="or">or</span>
             </div>
             <span class="label">Name :</span>
-            <input type="text" name="name" id="name" required />
+            <input type="text" name="name" id="name"/>
 
             <br />
 
             
             <span class="label">Email: </span>
-            <input type="email" name="email" id="email" required />
+            <input type="email" name="email" id="email"/>
 
             <br />
 
             <span class="label">Phone Number: </span>
-            <input type="tel" name="num" id="num" required />
+            <input type="tel" name="num" id="num" />
 
             <br />
 
 
             <span class="label">Purpose of visit :</span>
-            <input type="text" name="purpose" id="purpose" required />
+            <input type="text" name="purpose" id="purpose" />
 
             <br />
             

@@ -346,7 +346,7 @@
             <li id="nav_links"><a href="index.aspx" class="nav_link">Home</a></li>
             <li><a href="#" class="nav_link">About Us</a></li>
             <li><a href="admission.aspx" class="nav_link">Admission</a></li>
-            <li><a href='#' class="nav_link">Contact</a></li>
+            <li><a href='visitor.aspx' class="nav_link">Visitor</a></li>
             <li><a href="login.aspx" class="nav_link">Login</a></li>
             <li id="nav_btn"><a href="form1.aspx" id="login">Admission Form</a></li>
         </ul>

@@ -61,10 +61,11 @@
         }
 
         form {
-            background-color: rgba(255,255,255,.8);
+            background-color: rgba(255,255,255,.5);
             padding-left: 10%;
             width: 70%;
             margin-left: 15%;
+            margin-top: 8%;
             padding-top: 20px;
             padding-bottom: 40px;
             border-radius: 5px;
