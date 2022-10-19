@@ -123,7 +123,7 @@ Public Class visitor_auth
         dr.Read()
         name = dr("name")
         mail = dr("email")
-
+        'TRY BLOCK STARTS
 
         Try
             Dim Smtp_Server As New SmtpClient
