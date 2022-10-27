@@ -19,13 +19,14 @@ Public Class payment
 
         If Len(cno) <> 10 Then
             ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(Enter Correct Card Details');", True)
-
+            MsgBox("Enter Correct Card Details")
         ElseIf Len(cvv) <> 3 Then
             ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert(Enter Correct Card Details');", True)
             MsgBox("Enter Correct Card Details")
         ElseIf exp < Today.Year Then
             exp -= 1
             ClientScript.RegisterStartupScript(Me.GetType(), "alert", "alert('Card already expired!');", True)
+            MsgBox("Card already expired!")
         Else
             con.ConnectionString = "Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\anony\source\repos\Jayantian World\Jayantian World\App_Data\Jayantian.mdf;Integrated Security=True"
             con.Open()

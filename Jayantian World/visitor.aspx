@@ -146,7 +146,7 @@
         }
     </style>
 
-    <title>Registrarion Form | New </title>
+    <title>Visitor's Form</title>
 </head>
 <body>
     <div id="nav">
