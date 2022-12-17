@@ -75,29 +75,12 @@
 }
 
 #img1{
-    margin-top: 15px;
-    width: 40%;
-    border-radius: 50%;
-    box-shadow: 2px 2px 15px rgb(0, 0, 29);
-    display: inline-block;
-}
-
-#img2{
-    margin-top: 20px;
-    margin-left: 20px;
-    width: 50%;
-    border-radius: 5px;
-    box-shadow: 2px 2px 25px rgb(0, 0, 29);
-    display: inline-block;
-}
-#img3{
-    margin-top: 20px;
-    margin-left: 20%;
-    width: 50%;
-    border-radius: 5px;
-    box-shadow: 5px 5px 25px rgb(0, 0, 0);
-    display: inline-block;
-
+    margin-top: 114px;
+    width: 97%;
+    /* border-radius: 50%; */
+    box-shadow: 2px 2px 15px rgb(0 0 29);
+    /* display: inline-block; */
+    height: 84%;
 }
 
 .home_img{
@@ -344,7 +327,6 @@
         <ul>
             <li><a href="index.aspx">Jayantian World</a></li>
             <li id="nav_links"><a href="index.aspx" class="nav_link">Home</a></li>
-            <li><a href="#" class="nav_link">About Us</a></li>
             <li><a href="admission.aspx" class="nav_link">Admission</a></li>
             <li><a href='visitor.aspx' class="nav_link">Visitor</a></li>
             <li><a href="login.aspx" class="nav_link">Login</a></li>
@@ -361,9 +343,9 @@
             </div>
 
             <div class="right">
-                <img src="img/home_1.jpg" alt="Logo" id="img1" class="home_img" />
-                <img src="img/home_2.png" alt="Logo" id="img2" class="home_img" />
-                <img src="img/home_3.jpg" alt="Logo" id="img3" class="home_img" />
+                <img src="img/kjc.jpg" alt="Logo" id="img1" class="home_img" />
+               <%-- <img src="img/home_2.png" alt="Logo" id="img2" class="home_img" />
+                <img src="img/home_3.jpg" alt="Logo" id="img3" class="home_img" />--%>
             </div>
         </div>
     </div>
@@ -525,10 +507,10 @@
             <span class="foot_head">Quick Links</span>
             <ul>
                 <li id="foot_links"><a href="index.aspx" class="foot_link">Home</a></li>
-                <li><a href="#" class="foot_link">About Us</a></li>
                 <li><a href="admission.aspx" class="foot_link">Admission</a></li>
-                <li><a href="#" class="foot_link">Image Gallary</a></li>
-                <li><a href='#' class="foot_link">Contact</a></li>
+                <li><a href="visitor.aspx" class="foot_link">Visitor</a></li>
+                <li><a href='login.aspx' class="foot_link">Login</a></li>
+                <li><a href='form1.aspx' class="foot_link">Registration</a></li>
             </ul>
         </div>
         <div class="foot_divs">

@@ -169,7 +169,7 @@
             <br />
 
             <span class="label">Phone Number: </span>
-            <input type="tel" name="num" id="num" required />
+            <input type="tel" name="num" id="num" placeholder="Without country code" required />
 
             <br />
 

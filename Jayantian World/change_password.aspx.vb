@@ -80,13 +80,13 @@ Public Class chage_password
             Dim Smtp_Server As New SmtpClient
             Dim e_mail As New MailMessage()
             Smtp_Server.UseDefaultCredentials = False
-            Smtp_Server.Credentials = New System.Net.NetworkCredential("kjcadmission01@gmail.com", "F1vp2DrScdwmC4qt")
+            Smtp_Server.Credentials = New System.Net.NetworkCredential("portaladmission123@gmail.com", "hVIgrRUynk1jSzZd")
             Smtp_Server.Port = 587
             Smtp_Server.EnableSsl = True
             Smtp_Server.Host = "smtp-relay.sendinblue.com"
 
             e_mail = New MailMessage()
-            e_mail.From = New MailAddress("kjcadmission01@gmail.com")
+            e_mail.From = New MailAddress("portaladmission123@gmail.com")
             e_mail.To.Add(mail)
             e_mail.Subject = "Password Updated Successfully"
             e_mail.IsBodyHtml = True

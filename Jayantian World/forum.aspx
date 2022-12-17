@@ -110,7 +110,7 @@
         </div>
 
         <div id="form_area">
-            <input type="text" name="message" id="message" placeholder="Write Something!">
+            <input type="text" name="message" id="message" placeholder="Write Something!" required>
 
             <asp:Button ID="send" runat="server" Text="Send" />
         </div>

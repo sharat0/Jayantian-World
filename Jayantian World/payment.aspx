@@ -18,7 +18,12 @@
     <!-- Paragraph font -->
     <link href="https://fonts.googleapis.com/css2?family=Hind&display=swap" rel="stylesheet"/>
 
-
+    <style>
+        span#fee {
+    margin-left: 43%;
+    font-size: 25px;
+}
+    </style>
     <link rel="stylesheet" href="css/pay.css"/>
 
     <title>Form Fee Paymet</title>
